@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Ayane_Original_Body
+  m_Shader: {fileID: 4800000, guid: 37ae44567950f2d44985a71ef856b208, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+      _MainTex:
+        m_Texture: {fileID: 2800000, guid: d9a9b34cf5901c445a0f32d925b6645b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+      _MaskTex:
+        m_Texture: {fileID: 2800000, guid: c168b1a5cb6ad45498091764b09366b6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: {}
+    m_Floats:
+      _AdditionalLightSharpness: 5
+      _AdditionalLightStrength: 1
+      _Cull: 0
+      _Cutoff: 0.5
+      _DitherThreshold: 0
+      _DstBlend: 0
+      _DstBlendAlpha: 0
+      _GlowStrength: 0
+      _GrayBrightness: 1
+      _MaskGSensitivity: 2
+      _OutlineZCorrection: 0
+      _SrcBlend: 1
+      _SrcBlendAlpha: 1
+      _ZWrite: 1
+    m_Colors:
+      _BaseBrightness4: {r: 0, g: 0, b: 0, a: 0}
+      _CodeAddColor: {r: 0, g: 0, b: 0, a: 0}
+      _CodeAddRimColor: {r: 0, g: 0, b: 0, a: 0}
+      _CodeMultiplyColor: {r: 1, g: 1, b: 1, a: 1}
+      _GlowTint: {r: 0, g: 0, b: 0, a: 1}
+      _InvViewPower4: {r: 1, g: 1, b: 1, a: 5}
+      _InvViewStrength4: {r: 0, g: 0, b: 0, a: 0.2}
+      _OutlineTint: {r: 0.4, g: 0.4, b: 0.4, a: 1}
+      _RimAreaMultiplier4: {r: 7, g: 7, b: 3, a: 5}
+      _RimStrength4: {r: 1, g: 0.5, b: 0, a: 1}
+      _ShadowThreshold4: {r: 0.5, g: 0.65, b: 0.4, a: 0.7}
+      _ShadowTintB4: {r: 0.6166341, g: 0.6037736, b: 0.5298594, a: 0.5566038}
+      _ShadowTintG4: {r: 0.6166341, g: 0.6037736, b: 0.66396034, a: 0.5566038}
+      _ShadowTintR4: {r: 0.8773585, g: 0.6037736, b: 0.764151, a: 0.5566038}
+      _Tint: {r: 1, g: 1, b: 1, a: 1}
+      _TwoSideTint: {r: 1, g: 1, b: 1, a: 1}
+      _ViewLightEdge4: {r: 0, g: 0, b: 0, a: 1}
+      _ViewOffset4: {r: 0, g: 0, b: 0, a: 0}
+      _ViewPower4: {r: 1, g: 1, b: 1, a: 3}
+      _ViewStrength4: {r: 0, g: 0, b: 0, a: 0.4}
+  m_BuildTextureStacks: []

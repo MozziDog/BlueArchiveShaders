@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93880fdbb599b58b5e48a1ac89682eab, type: 3}
+  m_Name: SFX_Common_HG
+  m_EditorClassIdentifier:
+  AudioData:
+    GroupId: 0
+    IgnoreInterruptDelay: 1
+    IgnoreInterruptPlay: 1
+    AudioMixerGroup: {fileID: 24300100, guid: eac6f97e0486c2f4380cfb0c2b2a2f58, type: 2}
+    AudioMixerSnapshot:
+      AudioMixerSnapshot: {fileID: 0}
+      TimeToReach: 0
+    AudioClips:
+    - {fileID: 8300000, guid: 9a94a226434dfcf44a848addd6f0c987, type: 3}
+    - {fileID: 8300000, guid: cf6eb89b2970f4c4bb8dce64b40cfbae, type: 3}
+    - {fileID: 8300000, guid: 3de04342b036d064ca8ad16ddf9241a7, type: 3}
+    - {fileID: 8300000, guid: 6e718fbe07110cb4d830c39a6e3c8cc3, type: 3}
+    - {fileID: 8300000, guid: 27ecfa92b05da9b40a83a13772c4e0ef, type: 3}
+    - {fileID: 8300000, guid: cac25dffb706ae34e80d8eeb5adc9122, type: 3}
+    CustomCurves: []
+    BypassEffects: 0
+    BypassListenerEffects: 0
+    BypassReverbZones: 0
+    Loop: 0
+    Priority: 128
+    Volume: 0.8
+    Pitch: 1
+    RandomPitchMin: 0
+    RandomPitchMax: 0
+    Delay: 0
+    StereoPan: 0
+    SpatialBlend: 1
+    ReverbZoneMix: 1
+    DopplerLevel: 1
+    Spread: 0
+    VolumeRolloff: 1
+    MinDistance: 1
+    MaxDistance: 500

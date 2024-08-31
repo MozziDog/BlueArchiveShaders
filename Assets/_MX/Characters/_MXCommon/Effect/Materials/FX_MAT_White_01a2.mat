@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FX_MAT_White_01a2
+  m_Shader: {fileID: 4800000, guid: d1c0265171fa77741960abc70693e21b, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _OPACITYDISTORT_ON
+  - _SELECTCHANNEL_RED
+  - _TOGGLESWITCH0_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+      _Texture:
+        m_Texture: {fileID: 2800000, guid: 35a411b1f65e0714fb4ffac2f7fb6d20, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: {}
+    m_Floats:
+      Vector1_31C41B97: -1
+      Vector1_3BF9E79E: -0.78
+      Vector1_59C5C03: 0.12
+      Vector1_671B8F3C: 12
+      Vector1_9D7C625B: 3
+      Vector1_A9AF81A2: 0.25
+      Vector1_EA282FF7: 0
+      Vector1_EA691D16: 0.3
+      _1: 0
+      _Cull: 0
+      _Cull_Mode: 0
+      _Custom_Data_Offset_Use: 0
+      _Dis_Speed_X: -0.07
+      _Dis_Speed_Y: 0
+      _DispPowX: 0
+      _DispPowY: -0.2
+      _Distortion_Power_X: -0.2
+      _Distortion_Power_Y: -0.2
+      _Float0: 1
+      _Float1: 0
+      _Float5: 1
+      _Main_Speed_X: -0.2
+      _Main_Speed_Y: 0
+      _Main_Texture_No: 0
+      _Mask_Speed_X: -0.2
+      _Mask_Speed_Y: 0
+      _Multiplier: 1
+      _Multiply: 1
+      _Power: 1
+      _RGBRGBA: 0
+      _SelectChannel: 0
+      _Step_Power: 1
+      _ToggleSwitch0: 0
+      _USpeed: 0
+      _USpeed2: 0
+      _USpeed3: -1.15
+      _VSpeed: 0
+      _VSpeed2: 0
+      _VSpeed3: 0
+      _Value: 1
+      _ZOffsetFactor: 0
+      _ZOffsetUnits: 0
+      _ZTest_Mode: 4
+      _ZWrite_Mode: 0
+      _cloud1: 0
+      _cloud2: 0
+      _texcoord: 1
+    m_Colors:
+      Color_3F08FBF5: {r: 3.2941177, g: 1.3647059, b: 0.95686275, a: 0}
+      Color_98444634: {r: 5.992157, g: 1.0352942, b: 0.1254902, a: 0}
+      Color_A95239E6: {r: 6.792453, g: 0.6728373, b: 0.6728373, a: 0}
+      Vector2_60957000: {r: 1, g: 1, b: 0.85, a: 0}
+      Vector2_66DAD999: {r: 5, g: 5, b: 0, a: 0}
+      Vector2_834F525B: {r: 1, g: 1, b: 0, a: 0}
+      Vector2_862BBCA5: {r: 0, g: 0, b: 0, a: 0}
+      Vector2_9AD21926: {r: 0, g: -1, b: 0, a: 0}
+      Vector4_3B0758B1: {r: 1, g: 1, b: 0, a: 0}
+      Vector4_D37EBC07: {r: 1, g: 1, b: -0.23, a: -2.34}
+      _Color: {r: 9.082411, g: 9.082411, b: 9.082411, a: 1}
+      _Color0: {r: 0.7490196, g: 0.12941177, b: 0.015686275, a: 1}
+      _Color1: {r: 0, g: 0.04544001, b: 0.6132076, a: 0}
+      _MainColor: {r: 3.828904, g: 1.623776, b: 0.9020978, a: 0}
+      _Panner1: {r: 0, g: 0, b: 0, a: 0}
+      _Panner2: {r: 0, g: 0, b: 0, a: 0}
+      _TintColor: {r: 9.189588, g: 0, b: 9.045437, a: 1}
+  m_BuildTextureStacks: []

@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FX_MAT_Frozen_02
+  m_Shader: {fileID: 4800000, guid: cc6d5bfbbf8503c4e97b5f0ba31aeaef, type: 3}
+  m_ValidKeywords:
+  - _RGBRGBA_RGB
+  - _TEX_MAIN_DISTORT_RG
+  - _TEX_MASK_DISTORT_G
+  m_InvalidKeywords:
+  - _ADD_TEX_CHANNEL_R
+  - _GDISTORT_UV_CHANNEL_UV1
+  - _MAIN_DISTORT_USE_OFF
+  - _MAIN_UV_CHANNEL_UV1
+  - _MASK_DISTORT_USE_OFF
+  - _MASK_UV_CHANNEL_UV1
+  - _RDISTORT_UV_CHANNEL_UV1
+  - _RGBRGBA_ON
+  - _STEP_TEX_CHANNEL_G
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+      _Tex_DistortRG:
+        m_Texture: {fileID: 2800000, guid: 1d8ec83e5e720414fb193d4a8456fc7d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+      _Tex_Main:
+        m_Texture: {fileID: 2800000, guid: ee230cab4cef7d641b8eb55bb91afc78, type: 3}
+        m_Scale: {x: 0.8, y: 0.5}
+        m_Offset: {x: 0, y: 0}
+      _Tex_Mask:
+        m_Texture: {fileID: 2800000, guid: 10f96370c0ad77c45a5cc76dbe09e374, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: -0.1}
+    m_Ints: {}
+    m_Floats:
+      _AlphaPremultiplyOn: 0
+      _Alphaclip_Value: 0
+      _Cull: 2
+      _Cull_Mode: 2
+      _Dis_Speed_X: 0
+      _Dis_Speed_Y: 0
+      _Distortion_Power_X: 0
+      _Distortion_Power_Y: 0
+      _DstBlend: 10
+      _DstBlendAlpha: 10
+      _GDistort_Power_X: 0
+      _GDistort_Power_Y: 0.33
+      _GDistort_Speed_X: 0
+      _GDistort_Speed_Y: -0.3
+      _Main_Distort_Use: 0
+      _Main_Speed_X: 0
+      _Main_Speed_Y: 0
+      _Mask_Distort_Use: 0
+      _Mask_Speed_X: 0
+      _Mask_Speed_Y: 0
+      _Multiply: 0.5
+      _RDistort_Power_X: 0
+      _RDistort_Power_Y: -0.5
+      _RDistort_Speed_X: 0
+      _RDistort_Speed_Y: -0.2
+      _RGBRGBA: 0
+      _SrcBlend: 1
+      _SrcBlendAlpha: 1
+      _Tex_Main_Distort: 3
+      _Tex_Mask_Distort: 2
+      _Tex_Mask_Speed_X: 0
+      _Tex_Mask_Speed_Y: 0
+      _ZOffsetFactor: 0
+      _ZOffsetUnits: 0
+      _ZTest: 4
+      _ZTest_Mode: 4
+      _ZWrite: 0
+      _ZWrite_Mode: 0
+    m_Colors:
+      _Color: {r: 3.9999995, g: 3.9999995, b: 3.9999995, a: 1}
+      _CustomData_DistortOffsetG_CD1XYXY: {r: 0, g: 0, b: 0, a: 0}
+      _CustomData_DistortOffsetG_CD2XYXY: {r: 0, g: 0, b: 0, a: 0}
+      _CustomData_DistortOffsetR_CD1XYXY: {r: 0, g: 0, b: 0, a: 0}
+      _CustomData_DistortOffsetR_CD2XYXY: {r: 0, g: 0, b: 0, a: 0}
+      _CustomData_DistortOffset_CD1XYXY: {r: 0, g: 0, b: 0, a: 0}
+      _CustomData_DistortOffset_CD2XYXY: {r: 0, g: 0, b: 0, a: 0}
+      _CustomData_DistortPowerG_CD2XYXY: {r: 0, g: 0, b: 0, a: 0}
+      _CustomData_DistortPowerR_CD2XYXY: {r: 0, g: 0, b: 0, a: 0}
+      _CustomData_DistortPower_CD2XYXY: {r: 0, g: 0, b: 0, a: 0}
+      _CustomData_DistortTilingG_CD1XYXY: {r: 0, g: 0, b: 0, a: 0}
+      _CustomData_DistortTilingG_CD2XYXY: {r: 0, g: 0, b: 0, a: 0}
+      _CustomData_DistortTilingR_CD1XYXY: {r: 0, g: 0, b: 0, a: 0}
+      _CustomData_DistortTilingR_CD2XYXY: {r: 0, g: 0, b: 0, a: 0}
+      _CustomData_DistortTiling_CD1XYXY: {r: 0, g: 0, b: 0, a: 0}
+      _CustomData_DistortTiling_CD2XYXY: {r: 0, g: 0, b: 0, a: 0}
+      _CustomData_MainOffset_CD1XYXY: {r: 0, g: 0, b: 0, a: 0}
+      _CustomData_MainOffset_CD2XYXY: {r: 0, g: 0, b: 0, a: 0}
+      _CustomData_MainTiling_CD1XYXY: {r: 0, g: 0, b: 0, a: 0}
+      _CustomData_MainTiling_CD2XYXY: {r: 0, g: 0, b: 0, a: 0}
+      _CustomData_MaskOffset_CD1XYXY: {r: 0, g: 0, b: 0, a: 0}
+      _CustomData_MaskOffset_CD2XYXY: {r: 0, g: 0, b: 0, a: 0}
+      _CustomData_MaskTiling_CD1XYXY: {r: 0, g: 0, b: 0, a: 0}
+      _CustomData_MaskTiling_CD2XYXY: {r: 0, g: 0, b: 0, a: 0}
+      _GTilingxyOffsetzw: {r: 1, g: 1, b: 0, a: 0}
+      _Main_Color: {r: 0.42823276, g: 2.3041697, b: 5.3403134, a: 1}
+      _RTilingxyOffsetzw: {r: 1, g: 1, b: 0, a: 0}
+  m_BuildTextureStacks: []

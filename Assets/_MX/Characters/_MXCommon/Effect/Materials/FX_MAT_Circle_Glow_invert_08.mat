@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FX_MAT_Circle_Glow_invert_08
+  m_Shader: {fileID: 4800000, guid: b6bbadf22bb3fd94992dcb56bb66c5cc, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _MAIN_TEXTURE_NO_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+      _Tex_Main:
+        m_Texture: {fileID: 2800000, guid: 56de398599b5cf64f8573ad6a5950cc8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+      _Tex_Mask:
+        m_Texture: {fileID: 2800000, guid: aa06ddd338839a54f92d17b4b71e64fa, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: {}
+    m_Floats:
+      _AlphaClip: 0
+      _Blend: 0
+      _BumpScale: 1
+      _Cull: 2
+      _Cull_Mode: 2
+      _Custom_Data_MainMask_Offset_Use: 0
+      _Custom_Data_Offset_Use: 0
+      _Cutoff: 0.5
+      _DstBlend: 0
+      _EnvironmentReflections: 1
+      _GlossMapScale: 0
+      _Glossiness: 0
+      _GlossyReflections: 0
+      _Main_Speed_X: 0
+      _Main_Speed_Y: 0
+      _Main_Texture_No: 1
+      _Mask_Speed_X: 0
+      _Mask_Speed_Y: 0
+      _Metallic: 0
+      _Multiply: 1
+      _OcclusionStrength: 1
+      _QueueOffset: 0
+      _RGBRGBA: 0
+      _ReceiveShadows: 1
+      _Smoothness: 0.5
+      _SmoothnessTextureChannel: 0
+      _SpecularHighlights: 1
+      _SrcBlend: 1
+      _Surface: 0
+      _WorkflowMode: 1
+      _ZOffsetFactor: 0
+      _ZOffsetUnits: 0
+      _ZTest_Mode: 4
+      _ZWrite: 1
+      _ZWrite_Mode: 0
+    m_Colors:
+      _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+      _Color: {r: 1.8443027, g: 1.8443027, b: 1.8443027, a: 1}
+      _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+      _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+  m_BuildTextureStacks: []

@@ -1,0 +1,144 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FX_MAT_Circle_Glow_01z
+  m_Shader: {fileID: 4800000, guid: 1bd00106da3e5964ab8d7e7e6594acef, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _ALPHAPREMULTIPLY_ON
+  - _COLORCOLOR_ON
+  - _MAIN_TEXTURE_NO_ON
+  - _OPACITYDISTORT_ON
+  - _SELECTCHANNEL_RED
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3006
+  stringTagMap: {}
+  disabledShaderPasses:
+  - ALWAYS
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+      _Texture:
+        m_Texture: {fileID: 2800000, guid: 1ff84046b9da3594fa8f3b24be52007b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: {}
+    m_Floats:
+      Vector1_31C41B97: -1
+      Vector1_3BF9E79E: -0.78
+      Vector1_59C5C03: 0.12
+      Vector1_671B8F3C: 12
+      Vector1_9D7C625B: 3
+      Vector1_A9AF81A2: 0.25
+      Vector1_C863176E: 30
+      Vector1_D5CFBC76: 0.1
+      Vector1_EA282FF7: 0
+      Vector1_EA691D16: 0.3
+      _1: 0
+      _BlendOp: 0
+      _CameraFadingEnabled: 0
+      _CameraFarFadeDistance: 2
+      _CameraNearFadeDistance: 1
+      _ColorMode: 4
+      _Cull: 0
+      _Cull_Mode: 2
+      _Custom_Data_Offset_Use: 0
+      _Custom_Data_Use: 0
+      _Cutoff: 0.5
+      _Dis_Speed_X: 0
+      _Dis_Speed_Y: -0.69
+      _Disappear: 0
+      _DispPowX: 0
+      _DispPowY: 0
+      _Distortion_Power: -0.25
+      _Distortion_Power_X: 0.1
+      _Distortion_Power_Y: 0
+      _DstBlend: 10
+      _EmissionEnabled: 0
+      _FlipbookMode: 0
+      _Float0: -0.25
+      _Float1: -0.29
+      _Float13: 3.411765
+      _Float2: 1
+      _Float3: 0.06
+      _Float4: 0
+      _Float5: 1
+      _Float6: -1
+      _Float7: 0
+      _Flowspeed: 0
+      _LightingEnabled: 0
+      _Main_Speed_: 0
+      _Main_Speed_X: 0
+      _Main_Speed_Y: 0
+      _Main_Texture_No: 1
+      _Mask_Speed_X: 0
+      _Mask_Speed_Y: 0
+      _Mode: 3
+      _Multiplier: 3
+      _Multiply: 2
+      _NoiseScale: 2
+      _RGBRGBA: 0
+      _RampPow: 1
+      _SelectChannel: 0
+      _SoftParticlesEnabled: 0
+      _SoftParticlesFarFadeDistance: 1
+      _SoftParticlesNearFadeDistance: 0
+      _Speed_X: -0.19
+      _Speed_Y: -0.48
+      _SrcBlend: 1
+      _Strength: 2
+      _ToggleSwitch0: 0
+      _USpeed: 0
+      _USpeed2: 0
+      _USpeed3: 0
+      _VSpeed: 0
+      _VSpeed2: 0
+      _VSpeed3: 0
+      _ZOffsetFactor: 0
+      _ZOffsetUnits: 0
+      _ZTest_Mode: 4
+      _ZWrite: 0
+      _ZWrite_Mode: 0
+      _cloud1: 0
+      _cloud2: 0
+      _distort_scale: 1
+      _texcoord: 1
+    m_Colors:
+      Color_3F08FBF5: {r: 3.2941177, g: 1.3647059, b: 0.95686275, a: 0}
+      Color_98444634: {r: 5.992157, g: 1.0352942, b: 0.1254902, a: 0}
+      Color_A95239E6: {r: 6.792453, g: 0.6728373, b: 0.6728373, a: 0}
+      Vector2_60957000: {r: 1, g: 1, b: 0.85, a: 0}
+      Vector2_65607CD3: {r: 0, g: -1, b: 0, a: 0}
+      Vector2_66DAD999: {r: 5, g: 5, b: 0, a: 0}
+      Vector2_744FC188: {r: 1, g: 1, b: 0, a: 0}
+      Vector2_82238DD6: {r: 0, g: -1, b: 0, a: 0}
+      Vector2_834F525B: {r: 1, g: 1, b: 0, a: 0}
+      Vector2_862BBCA5: {r: 0, g: 0, b: 0, a: 0}
+      Vector2_9AD21926: {r: 0, g: -1, b: 0, a: 0}
+      Vector2_B49551FD: {r: 0, g: 0, b: 0, a: 0}
+      Vector2_D1F89673: {r: 0.2, g: 0.2, b: 0, a: 0}
+      Vector4_3B0758B1: {r: 1, g: 1, b: 0, a: 0}
+      Vector4_D37EBC07: {r: 1, g: 1, b: -0.23, a: -2.34}
+      _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
+      _Color: {r: 5.2164755, g: 5.2164755, b: 5.2164755, a: 1}
+      _Color0: {r: 5.992157, g: 1.0352942, b: 0.1254902, a: 1}
+      _Color1: {r: 0, g: 0.04544001, b: 0.6132076, a: 0}
+      _ColorAddSubDiff: {r: 1, g: 0, b: 0, a: 0}
+      _Color_Inside: {r: 0, g: 0.057713658, b: 0.33962256, a: 0}
+      _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+      _Panner1: {r: 0, g: 0, b: 0, a: 0}
+      _Panner2: {r: 0, g: 0, b: 0, a: 0}
+      _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
+      _TintColor: {r: 2.9960785, g: 2.9960785, b: 2.9960785, a: 1}
+      _Vector0: {r: 0, g: 0, b: 0, a: 0}
+      _Vector1: {r: 1, g: 1, b: 0, a: 0}
+      _Vector2: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []

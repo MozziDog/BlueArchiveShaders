@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hoshino_Original_Shield
+  m_Shader: {fileID: 4800000, guid: 9363ed14b4e52db4e8c6ecd525571fc1, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - OUTLINE_AVG_NORMALS
+  - _DAMAGE_0
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+      _MainTex:
+        m_Texture: {fileID: 2800000, guid: f948a684554d2194aae568a8a1a6fb6d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+      _SourceTex:
+        m_Texture: {fileID: 2800000, guid: 306f498fcf667e54c984d6fe61c57031, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: {}
+    m_Floats:
+      _AdditionalLightSharpness: 5
+      _AdditionalLightStrength: 1
+      _AlphaClip: 0
+      _Blend: 0
+      _BumpScale: 1
+      _CrushScale: 1
+      _Cull: 2
+      _Cutoff: 0.5
+      _Damage: 1
+      _DamageON: 1
+      _DetailNormalMapScale: 1
+      _DitherThreshold: 0
+      _DstBlend: 0
+      _Fire: 0
+      _FireBackCol_Str: 0.1
+      _FireValue: 1
+      _GlossMapScale: 1
+      _Glossiness: 0.5
+      _GlossyReflections: 1
+      _GlowStrength0: 0
+      _GlowStrictness0: 3
+      _GrayBrightness: 1
+      _IsDither: 0
+      _LightStrong: 10
+      _LightValue: 0.15
+      _Metallic: 0
+      _NoiseColStrong: 1
+      _OcclusionStrength: 1
+      _OutlineThickness: 0.003
+      _Parallax: 0.02
+      _ShadowStrong: 20
+      _ShadowThreshold: 0.5
+      _ShadowValue: 0.3
+      _SmoothnessTextureChannel: 0
+      _SpecStrong: 0.1
+      _SpecularHighlights: 1
+      _SrcBlend: 1
+      _Surface: 0
+      _UVSec: 0
+      _UseGlow: 0
+      _UseOutlineAbsolute: 0
+      _UseOutlineNormal: 0
+      _UseOutlineVertexColor: 1
+      _WorkflowMode: 1
+      _ZWrite: 1
+    m_Colors:
+      _CodeAddColor: {r: 0, g: 0, b: 0, a: 0}
+      _CodeAddRimColor: {r: 0, g: 0, b: 0, a: 0}
+      _CodeMultiplyColor: {r: 1, g: 1, b: 1, a: 1}
+      _Color: {r: 1, g: 1, b: 1, a: 1}
+      _DmgCol: {r: 0.6886792, g: 0.6648955, b: 0.613964, a: 0}
+      _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+      _FakeLightDir: {r: 0.1, g: 0.65, b: 0, a: 0}
+      _FireCol: {r: 0.91, g: 0.74, b: 0, a: 0}
+      _GlowMaskColor0: {r: 1, g: 1, b: 1, a: 1}
+      _GlowTint0: {r: 0, g: 0, b: 0, a: 1}
+      _NoiseDir: {r: 0.04, g: 0.21, b: 0, a: 0}
+      _OutlineTint: {r: 0.4, g: 0.4, b: 0.4, a: 1}
+      _ShadowCol: {r: 0.8018868, g: 0.8018868, b: 0.8018868, a: 1}
+      _ShadowTint: {r: 0.8018868, g: 0.8018868, b: 0.8018868, a: 1}
+      _SpecColor: {r: 0.9198113, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []

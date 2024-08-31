@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FX_MAT_Stretch_Scroll_17
+  m_Shader: {fileID: 4800000, guid: 5b3ea46987cdb1d43923dce6aa6e0ff0, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _CUSTOM_DATA_MAINMASK_OFFSET_USE_ON
+  - _MASK_DISTORTION_USE_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 1
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+      _Tex_Distort:
+        m_Texture: {fileID: 2800000, guid: 4d8aae9dbf5d97f4292c8ce26ffe2066, type: 3}
+        m_Scale: {x: 0.56, y: 2}
+        m_Offset: {x: 0, y: 0}
+      _Tex_Main:
+        m_Texture: {fileID: 2800000, guid: ccdb789a388cd7e448e15c09170ceb1f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+      _Tex_Mask:
+        m_Texture: {fileID: 2800000, guid: f13389685bfb452449598c7b0b77616c, type: 3}
+        m_Scale: {x: 2.9, y: 1.76}
+        m_Offset: {x: 0.24, y: 0}
+    m_Ints: {}
+    m_Floats:
+      _Cull_Mode: 0
+      _Custom_Data_Distort_Power_Use: 0
+      _Custom_Data_MainMask_Offset_Use: 1
+      _Dis_Speed_X: -0.45
+      _Dis_Speed_Y: 0
+      _Distortion_Power_X: -1
+      _Distortion_Power_Y: 0
+      _Main_Distortion_Use: 0
+      _Main_Speed_X: 0
+      _Main_Speed_Y: 0
+      _Mask_Distortion_Use: 1
+      _Mask_Speed_X: 0
+      _Mask_Speed_Y: 0
+      _Multiply: 1
+      _RGBRGBA: 0
+      _ZOffsetFactor: 0
+      _ZOffsetUnits: 0
+      _ZTest_Mode: 4
+      _ZWrite_Mode: 0
+    m_Colors:
+      _Color: {r: 4, g: 4, b: 4, a: 1}
+  m_BuildTextureStacks: []

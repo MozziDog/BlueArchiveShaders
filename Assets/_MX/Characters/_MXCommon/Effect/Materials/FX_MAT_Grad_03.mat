@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FX_MAT_Grad_03
+  m_Shader: {fileID: 4800000, guid: b6bbadf22bb3fd94992dcb56bb66c5cc, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _CUSTOM_DATA_MAINMASK_OFFSET_USE_ON
+  - _CUSTOM_DATA_OFFSET_USE_ON
+  - _RECEIVE_SHADOWS_OFF
+  m_LightmapFlags: 2
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - ALWAYS
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+      _Tex_Main:
+        m_Texture: {fileID: 2800000, guid: 649b47b92267f4d43a8c74cbb46477f5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+      _Tex_Mask:
+        m_Texture: {fileID: 2800000, guid: 1b06b926d2edd58458e21087f0087a7f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: {}
+    m_Floats:
+      _AlphaClip: 0
+      _Blend: 0
+      _BlendOp: 0
+      _BumpScale: 1
+      _CameraFadingEnabled: 0
+      _CameraFarFadeDistance: 2
+      _CameraNearFadeDistance: 1
+      _ColorMask: 15
+      _ColorMode: 0
+      _Cull: 2
+      _Cull_Mode: 2
+      _Custom_Data_MainMask_Offset_Use: 1
+      _Custom_Data_Offset_Use: 1
+      _Cutoff: 0.5
+      _DistortionBlend: 0.5
+      _DistortionEnabled: 0
+      _DistortionStrength: 1
+      _DistortionStrengthScaled: 0.1
+      _DstBlend: 0
+      _EmissionEnabled: 0
+      _FlipbookBlending: 0
+      _FlipbookMode: 0
+      _GlossMapScale: 1
+      _Glossiness: 0.5
+      _GlossinessSource: 0
+      _GlossyReflections: 1
+      _LightingEnabled: 1
+      _Main_Speed_X: 0
+      _Main_Speed_Y: 0
+      _Main_Texture_No: 0
+      _Mask_Speed_X: 0
+      _Mask_Speed_Y: 0
+      _Mode: 0
+      _Multiply: 1
+      _QueueOffset: 0
+      _RGBRGBA: 0
+      _SampleGI: 0
+      _Shininess: 1
+      _Smoothness: 0.5
+      _SmoothnessSource: 0
+      _SmoothnessTextureChannel: 0
+      _SoftParticlesEnabled: 0
+      _SoftParticlesFarFadeDistance: 1
+      _SoftParticlesNearFadeDistance: 0
+      _SpecSource: 0
+      _SpecularHighlights: 1
+      _SrcBlend: 1
+      _Stencil: 0
+      _StencilComp: 8
+      _StencilOp: 0
+      _StencilReadMask: 255
+      _StencilWriteMask: 255
+      _Surface: 0
+      _UseUIAlphaClip: 0
+      _ZOffsetFactor: 0
+      _ZOffsetUnits: 0
+      _ZTest_Mode: 4
+      _ZWrite: 1
+      _ZWrite_Mode: 0
+    m_Colors:
+      _BaseColor: {r: 1.4980392, g: 1.4980392, b: 1.4980392, a: 1}
+      _BaseColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
+      _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
+      _Color: {r: 7.152941, g: 7.152941, b: 7.152941, a: 1}
+      _ColorAddSubDiff: {r: -1, g: 0, b: 0, a: 0}
+      _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+      _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
+      _SpecColor: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []

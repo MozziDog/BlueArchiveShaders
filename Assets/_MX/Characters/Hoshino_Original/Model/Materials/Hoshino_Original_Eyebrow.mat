@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hoshino_Original_Eyebrow
+  m_Shader: {fileID: 4800000, guid: c77e60e623262f047a23e138690ad453, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: {}
+    m_Ints: {}
+    m_Floats:
+      _AdditionalLightSharpness: 5
+      _AdditionalLightStrength: 0.15
+      _AlphaClip: 0
+      _Blend: 0
+      _BumpScale: 1
+      _Cull: 2
+      _Cutoff: 0.5
+      _DetailNormalMapScale: 1
+      _DitherThreshold: 0
+      _DstBlend: 0
+      _DstBlendAlpha: 0
+      _GlossMapScale: 1
+      _Glossiness: 0
+      _GlossyReflections: 1
+      _GrayBrightness: 1
+      _Metallic: 0
+      _OcclusionStrength: 1
+      _Parallax: 0.02
+      _SmoothnessTextureChannel: 0
+      _SpecularHighlights: 1
+      _SrcBlend: 1
+      _SrcBlendAlpha: 1
+      _Surface: 0
+      _UVSec: 0
+      _WorkflowMode: 1
+      _ZCorrection: 0.046
+      _ZWrite: 1
+    m_Colors:
+      _CodeAddColor: {r: 0, g: 0, b: 0, a: 0}
+      _CodeAddRimColor: {r: 0, g: 0, b: 0, a: 0}
+      _CodeMultiplyColor: {r: 1, g: 1, b: 1, a: 1}
+      _Color: {r: 0.5882353, g: 0.5882353, b: 0.5882353, a: 1}
+      _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
+      _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+      _Tint: {r: 0.9622642, g: 0.35857958, b: 0.44771403, a: 1}
+  m_BuildTextureStacks: []

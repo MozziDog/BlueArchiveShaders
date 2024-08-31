@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Ayane_Original_Eyebrow
+  m_Shader: {fileID: 4800000, guid: c9e8f94e1e30546469ce023a406378a1, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+      _MainTex:
+        m_Texture: {fileID: 2800000, guid: f648bcb03e3597545ad35ea57a871cda, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: {}
+    m_Floats:
+      _AdditionalLightSharpness: 5
+      _AdditionalLightStrength: 0.15
+      _AlphaClip: 0
+      _Blend: 0
+      _BumpScale: 1
+      _Cull: 2
+      _Cutoff: 0.5
+      _DitherThreshold: 0
+      _DstBlend: 0
+      _DstBlendAlpha: 0
+      _EnvironmentReflections: 1
+      _GlossMapScale: 0
+      _Glossiness: 0
+      _GlossyReflections: 0
+      _GrayBrightness: 1
+      _Metallic: 0
+      _OcclusionStrength: 1
+      _QueueOffset: 0
+      _ReceiveShadows: 1
+      _Smoothness: 0.5
+      _SmoothnessTextureChannel: 0
+      _SpecularHighlights: 1
+      _SrcBlend: 1
+      _SrcBlendAlpha: 1
+      _Surface: 0
+      _WorkflowMode: 1
+      _ZCorrection: 0.033
+      _ZWrite: 1
+    m_Colors:
+      _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+      _CodeAddColor: {r: 0, g: 0, b: 0, a: 0}
+      _CodeAddRimColor: {r: 0, g: 0, b: 0, a: 0}
+      _CodeMultiplyColor: {r: 1, g: 1, b: 1, a: 1}
+      _Color: {r: 1, g: 1, b: 1, a: 1}
+      _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+      _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+      _Tint: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []

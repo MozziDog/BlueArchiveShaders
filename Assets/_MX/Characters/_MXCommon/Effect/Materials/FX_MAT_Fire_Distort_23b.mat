@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FX_MAT_Fire_Distort_23b
+  m_Shader: {fileID: 4800000, guid: 5b3ea46987cdb1d43923dce6aa6e0ff0, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _CUSTOM_DATA_MAINMASK_OFFSET_USE_ON
+  - _MAIN_DISTORTION_USE_ON
+  - _MASK_DISTORTION_USE_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+      _Tex_Distort:
+        m_Texture: {fileID: 2800000, guid: 5249e6f5d964929488430c3dd7298b1e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+      _Tex_Main:
+        m_Texture: {fileID: 2800000, guid: f13389685bfb452449598c7b0b77616c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: -0.4, y: 0}
+      _Tex_Mask:
+        m_Texture: {fileID: 2800000, guid: 97b94819110a06941916a9192bfb4e90, type: 3}
+        m_Scale: {x: 2, y: 1}
+        m_Offset: {x: -1.3, y: 0}
+    m_Ints: {}
+    m_Floats:
+      _AlphaClip: 0
+      _Blend: 0
+      _BumpScale: 1
+      _Cull: 2
+      _Cull_Mode: 0
+      _Custom_Data_Distort_Power_Use: 0
+      _Custom_Data_MainMask_Offset_Use: 1
+      _Cutoff: 0.5
+      _Dis_Speed_X: -0.2
+      _Dis_Speed_Y: 0
+      _Distortion_Power_X: -0.12
+      _Distortion_Power_Y: 0
+      _DstBlend: 0
+      _EnvironmentReflections: 1
+      _GlossMapScale: 0
+      _Glossiness: 0
+      _GlossyReflections: 0
+      _Main_Distortion_Use: 1
+      _Main_Speed_X: 0
+      _Main_Speed_Y: 0
+      _Mask_Distortion_Use: 1
+      _Mask_Speed_X: 0
+      _Mask_Speed_Y: 0
+      _Metallic: 0
+      _Multiply: 2
+      _OcclusionStrength: 1
+      _QueueOffset: 0
+      _RGBRGBA: 0
+      _ReceiveShadows: 1
+      _Smoothness: 0.5
+      _SmoothnessTextureChannel: 0
+      _SpecularHighlights: 1
+      _SrcBlend: 1
+      _Surface: 0
+      _WorkflowMode: 1
+      _ZOffsetFactor: 0
+      _ZOffsetUnits: 0
+      _ZTest_Mode: 4
+      _ZWrite: 1
+      _ZWrite_Mode: 0
+    m_Colors:
+      _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+      _Color: {r: 1.4980392, g: 1.4980392, b: 1.4980392, a: 1}
+      _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+      _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+  m_BuildTextureStacks: []

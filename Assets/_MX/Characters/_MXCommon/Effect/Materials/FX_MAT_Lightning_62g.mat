@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FX_MAT_Lightning_62g
+  m_Shader: {fileID: 4800000, guid: d1df7aeb0de35974fb5280d095be0c4b, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _CUSTOM_DATA_DISTORT_POWER_USE_ON
+  - _CUSTOM_DATA_MASK_OFFSET_USECUSTOM78_ON
+  - _MAIN_TEXTURE_NO_ON
+  - _STEP_SCROLL_USE_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+      _Tex_Main:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+      _Tex_Mask:
+        m_Texture: {fileID: 2800000, guid: 493ddf6ad91dc6649ad4d91c27fe763d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: {}
+    m_Floats:
+      _AlphaClip: 0
+      _Blend: 0
+      _BumpScale: 1
+      _Cull: 2
+      _Cull_Mode: 0
+      _Custom_Data_Distort_Power_Use: 1
+      _Custom_Data_Main_Offset_Use: 0
+      _Custom_Data_Mask_Offset_Use: 0
+      _Custom_Data_Mask_Offset_Usecustom78: 1
+      _Custom_Data_Offset_Use: 0
+      _Cutoff: 0.5
+      _Dis_Speed_X: 0
+      _Dis_Speed_Y: 0
+      _Distortion_Power_X: 0.03
+      _Distortion_Power_Y: 0
+      _DstBlend: 0
+      _EnvironmentReflections: 1
+      _GlossMapScale: 0
+      _Glossiness: 0
+      _GlossyReflections: 0
+      _Main_Speed_X: 0
+      _Main_Speed_Y: 0
+      _Main_Texture_No: 1
+      _Mask_Multiply: 0
+      _Mask_Speed_X: 0
+      _Mask_Speed_Y: 0
+      _Metallic: 0
+      _Multiply: 1
+      _OcclusionStrength: 1
+      _QueueOffset: 0
+      _RGBRGBA: 0
+      _ReceiveShadows: 1
+      _Smoothness: 0.5
+      _SmoothnessTextureChannel: 0
+      _SpecularHighlights: 1
+      _SrcBlend: 1
+      _Step_Custom_DataVertex_color_Use: 0
+      _Step_Power: 0.157
+      _Step_Scroll_Use: 1
+      _Sub_Multiply: 0.75
+      _Sub_Speed_X: 0
+      _Sub_Speed_Y: 0
+      _Surface: 0
+      _UV_Add_Use: 0
+      _Vertex_Alpha_Use: 0
+      _WorkflowMode: 1
+      _ZOffsetFactor: 0
+      _ZOffsetUnits: 0
+      _ZTest_Mode: 4
+      _ZWrite: 1
+      _ZWrite_Mode: 0
+    m_Colors:
+      _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+      _Color: {r: 47.937256, g: 47.937256, b: 47.937256, a: 1}
+      _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+      _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+      _UV_Add_TilingOffset: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
