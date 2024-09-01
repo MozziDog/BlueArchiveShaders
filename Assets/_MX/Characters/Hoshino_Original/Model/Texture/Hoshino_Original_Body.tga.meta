@@ -1,11 +1,9 @@
 fileFormatVersion: 2
 guid: 7d979ac05f277f446a03700693e78003
-timeCreated: 1721369770
-licenseType: Free
 TextureImporter:
-  serializedVersion: 12
   internalIDToNameTable: []
   externalObjects: {}
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -79,46 +77,47 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID:
+    spriteID: 
     internalID: 0
     vertices: []
-    indices: []
+    indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable: {}
-  spritePackingTag:
-  output:
-    textureImportInstructions:
-      compressedFormat: 0
-      uncompressedFormat: 0
-      desiredFormat: 0
-      usageMode: 0
-      colorSpace: 0
-      androidETC2FallbackFormat: 0
-      width: 0
-      height: 0
-      depth: 0
-      cubeIntermediateSize: 0
-      cubeMode: 0
-      cubeLayout: 0
-      compressionQuality: 0
-      androidETC2FallbackDownscale: 0
-      vtOnly: 0
-    sourceTextureInformation:
-      width: 0
-      height: 0
-      doesTextureContainAlpha: 0
-      sourceWasHDR: 0
-    importInspectorWarnings:
+  spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
-  userData:
+  userData: 
   assetBundleName: 40c51c68f14d02f193730c382bae5fbe.bundle
-  assetBundleVariant:
+  assetBundleVariant: 

@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Serika_Original_EyeMouth
-  m_Shader: {fileID: 4800000, guid: 6e494ec4d5e08704abde9dc3601b4254, type: 3}
+  m_Shader: {fileID: 4800000, guid: 02d96945336b1cf4ba4c3e7695b2e620, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -20,51 +20,81 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-      _MainTex:
+    - Tex_Base:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Tex_Mask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
         m_Texture: {fileID: 2800000, guid: f7deced4e8bbc68498b7c859e727222f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-      _MouthTileTex:
+    - _MouthTileTex:
         m_Texture: {fileID: 2800000, guid: b6d6115ada3edcb44a794d333afdb168, type: 3}
         m_Scale: {x: 0.5, y: 0.5}
         m_Offset: {x: 0.875, y: 0.75}
-    m_Ints: {}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
-      _AdditionalLightSharpness: 5
-      _AdditionalLightStrength: 0.15
-      _AlphaClip: 0
-      _Blend: 0
-      _BumpScale: 1
-      _Cull: 2
-      _Cutoff: 0.5
-      _DetailNormalMapScale: 1
-      _DitherThreshold: 0
-      _DstBlend: 0
-      _GlossMapScale: 1
-      _Glossiness: 0
-      _GlossyReflections: 1
-      _GrayBrightness: 1
-      _Metallic: 0
-      _MouthTileCols: 8
-      _MouthTileRows: 8
-      _OcclusionStrength: 1
-      _Parallax: 0.02
-      _SmoothnessTextureChannel: 0
-      _SpecularHighlights: 1
-      _SrcBlend: 1
-      _Surface: 0
-      _UVSec: 0
-      _WhiteIntensity: 3.43
-      _WorkflowMode: 1
-      _ZWrite: 1
+    - _AdditionalLightSharpness: 5
+    - _AdditionalLightStrength: 0.15
+    - _AlphaClip: 0
+    - _Blend: 0
+    - _BumpScale: 1
+    - _Cull: 2
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DitherThreshold: 0
+    - _DstBlend: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0
+    - _GlossyReflections: 1
+    - _GrayBrightness: 1
+    - _LightSharpness: 0.06
+    - _Metallic: 0
+    - _MouthTileCols: 8
+    - _MouthTileRows: 8
+    - _OcclusionStrength: 1
+    - _OutlineWidth: 0.05
+    - _Parallax: 0.02
+    - _QueueControl: -1
+    - _QueueOffset: 0
+    - _RimAreaMultiplier: 6
+    - _RimStrength: 1
+    - _ShadowThreshold: 0.4
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _Surface: 0
+    - _UVSec: 0
+    - _WhiteIntensity: 3.43
+    - _WorkflowMode: 1
+    - _ZWrite: 1
     m_Colors:
-      _CodeAddColor: {r: 0, g: 0, b: 0, a: 0}
-      _CodeAddRimColor: {r: 0, g: 0, b: 0, a: 0}
-      _CodeMultiplyColor: {r: 1, g: 1, b: 1, a: 1}
-      _Color: {r: 0.588, g: 0.588, b: 0.588, a: 1}
-      _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
-      _EyeTint: {r: 1, g: 1, b: 1, a: 1}
-      _MouthTint: {r: 1, g: 1, b: 1, a: 1}
-      _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-      _Tint: {r: 1, g: 1, b: 1, a: 1}
+    - _CodeAddColor: {r: 0, g: 0, b: 0, a: 0}
+    - _CodeAddRimColor: {r: 0, g: 0, b: 0, a: 0}
+    - _CodeMultiplyColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.588, g: 0.588, b: 0.588, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
+    - _EyeTint: {r: 1, g: 1, b: 1, a: 1}
+    - _MouthTint: {r: 1, g: 1, b: 1, a: 1}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _RimLight_Color: {r: 0.9245283, g: 0.9245283, b: 0.9245283, a: 0}
+    - _ShadowTint: {r: 0.16037735, g: 0.16037735, b: 0.16037735, a: 0}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _Tint: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

@@ -25,6 +25,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 1fd1eed6c96c2eb488d472cf300a1a97, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - Tex_Mask:
+        m_Texture: {fileID: 2800000, guid: e02b2ed3f44bb9a48b2bdf2e60ac4ed4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - Tex_mask:
         m_Texture: {fileID: 2800000, guid: e02b2ed3f44bb9a48b2bdf2e60ac4ed4, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -85,7 +89,7 @@ Material:
     - _QueueControl: -1
     - _QueueOffset: 0
     - _RimAreaMultiplier: 3
-    - _RimStrength: 1
+    - _RimStrength: 0
     - _ShadowPow: 20
     - _ShadowStrong: 10
     - _ShadowThreshold: 0.5
@@ -116,7 +120,7 @@ Material:
     - _OutlineTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _RimLight_Color: {r: 0.9245283, g: 0.9245283, b: 0.9245283, a: 0}
     - _ShadowCol: {r: 0.8301887, g: 0.82837397, b: 0.81844074, a: 0}
-    - _ShadowTint: {r: 0.6981132, g: 0.6981132, b: 0.6981132, a: 1}
+    - _ShadowTint: {r: 0.5, g: 0.4976415, b: 0.4976415, a: 1}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
     - _Tint: {r: 1, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []

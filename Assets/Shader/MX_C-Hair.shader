@@ -1,16 +1,17 @@
-Shader "_MX/MX_C-Body"
+Shader "_MX/MX_C-Hair"
 {
     Properties
     {
         [NoScaleOffset]Tex_Base     ("Base", 2D)                        = "white" {}
-        [NoScaleOffset]Tex_Mask     ("Mask", 2D)                        = "black" {}
-        _Tint                       ("Tint", Color)                     = (0.9528302, 0.9349014, 0.7685564, 1)
-        _ShadowTint                 ("ShadowTint", Color)               = (0.8490566, 0.7651243, 0.6928622, 1)
+        [NoScaleOffset]Tex_normal   ("Normal", 2D)                      = "white" {}
+        [NoScaleOffset]Tex_mask     ("Mask", 2D)                        = "white" {}
+        _Tint                       ("Tint", Color)                     = (0.9528302, 0.9349014, 0.7685564, 0)
+        _ShadowTint                 ("ShadowTint", Color)               = (0.1603774, 0.1603774, 0.1603774, 0)
         _ShadowThreshold            ("ShadowThreshold", Float)          = 0.4
-        _LightSharpness             ("LightSharpness", Float)           = 0.03
-        _RimAreaMultiplier          ("RimAreaMultiplier", Float)        = 10
+        _LightSharpness             ("LightSharpness", Float)           = 0.06
+        _RimAreaMultiplier          ("RimAreaMultiplier", Float)        = 3
         _RimStrength                ("RimStrength", Float)              = 1
-        _RimLight_Color             ("RimLight Color", Color)           = (0.5, 0.5, 0.5, 0)
+        _RimLight_Color             ("RimLight Color", Color)           = (0.9245283, 0.9245283, 0.9245283, 0)
         _GrayBrightness             ("GrayBrightness", Float)           = 1
         _CodeMultiplyColor          ("CodeMultiplyColor", Color)        = (1, 1, 1, 0)
         _CodeAddColor               ("CodeAddColor", Color)             = (0, 0, 0, 0)
@@ -60,10 +61,12 @@ Shader "_MX/MX_C-Body"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Shadows.hlsl"
 
-            TEXTURE2D(Tex_Base); 
             SAMPLER(samplerTex_Base);
-            TEXTURE2D(Tex_Mask);
+            TEXTURE2D(Tex_Base); 
+            SAMPLER(samplerTex_Normal);
+            TEXTURE2D(Tex_normal);
             SAMPLER(samplerTex_Mask);
+            TEXTURE2D(Tex_mask);
 
             CBUFFER_START(UnityPerMaterial)
                 float4 _Tint;
@@ -142,31 +145,29 @@ Shader "_MX/MX_C-Body"
                 color = mainLight.distanceAttenuation * mainLight.shadowAttenuation;
 
                 // 텍스쳐 샘플링
+                //UnityTexture2D mainTex2D = UnityBuildTexture2DStructNoScale(Tex_Base);
                 float4 albedo = SAMPLE_TEXTURE2D(Tex_Base, samplerTex_Base, input.uv);
-                float4 maskSample = SAMPLE_TEXTURE2D(Tex_Mask, samplerTex_Mask, input.uv);
+                //UnityTexture2D normalTex2D = UnityBuildTexture2DStructNoScale(Tex_normal);
+                float4 normalSample = SAMPLE_TEXTURE2D(Tex_normal, samplerTex_Normal, input.uv);
+                //UnityTexture2D maskTex2D = UnityBuildTexture2DStructNoScale(Tex_mask);
+                float4 maskSample = SAMPLE_TEXTURE2D(Tex_mask, samplerTex_Normal, input.uv);
 
                 // 음영 계산
+                // float3 mainLightDir, mainLightColor;
+                // MainLight_float(mainLightDir, mainLightColor);
                 float3 mainLightDir = mainLight.direction;
                 float3 mainLightColor = mainLight.color;
                 float3 mainLightAttenuation = mainLight.shadowAttenuation * mainLight.distanceAttenuation;
                 mainLightColor = mainLightColor * mainLightAttenuation;
                 float dotResult = dot(mainLightDir, input.normalWS.xyz);
-                // 디테일 마스크 적용 G: 오클루전
-                dotResult = dotResult - (maskSample.g) * (maskSample.a);
                 float brightness = smoothstep(_ShadowThreshold, _ShadowThreshold + _LightSharpness, (dotResult + 1) * 0.5);
-
-                // Specular 계산
-                float3 halfVector = normalize(mainLightDir + input.viewDirWS);
-                float spec = saturate(dot(halfVector, input.normalWS.xyz));
-                spec = pow(spec, 10);
-                // 디테일 마스크 적용 R: 메탈릭
-                spec = spec * maskSample.r;
-                // albedo = lerp(albedo, (mainLightColor, 1), maskSample.r * 0.1);
-                //albedo = albedo * (1- maskSample.r);
+                brightness = brightness * maskSample.g;
 
                 // 틴트 적용
                 float4 shadeTint = brightness * _Tint + abs(1-brightness) * _ShadowTint;
                 float4 tintedAlbedo = float4(mainLightColor.xyz, 1) * albedo * shadeTint;
+                // float4 tintedAlbedo = (brightness, brightness, brightness, 1) * albedo * shadeTint;
+                //float4 tintedAlbedo = albedo * shadeTint;
 
                 // 코드로 색상 조정 1
                 float4 adjustedAlbedo = tintedAlbedo * _CodeMultiplyColor + _CodeAddColor;
@@ -174,14 +175,21 @@ Shader "_MX/MX_C-Body"
                 // 림라이팅
                 float rim_base = pow((1.0 - saturate(dot(normalize(input.normalWS.xyz), normalize(input.viewDirWS)))), _RimAreaMultiplier);
                 float4 rimlight = rim_base * _RimLight_Color * _RimStrength;
-                // 디테일 마스크 적용 B: 림라이팅?
-                rimlight = rimlight * (1 - maskSample.b);
 
                 // 코드로 색상 조정 2
-                rimlight = rimlight * (1 + _CodeAddRimColor);
+                rimlight = rimlight * _CodeAddRimColor;
             
                 // 최종 색상 조정 (_GrayBrightness)
-                float4 finalColor = (adjustedAlbedo + rimlight + spec) * _GrayBrightness;
+                float4 finalColor = (adjustedAlbedo + rimlight) * _GrayBrightness;
+
+                // #if _ALPHATEST_ON
+                //     half alpha = surfaceDescription.Alpha;
+                //     clip(alpha - surfaceDescription.AlphaClipThreshold);
+                // #elif _SURFACE_TYPE_TRANSPARENT
+                //     half alpha = surfaceDescription.Alpha;
+                // #else
+                //     half alpha = 1;
+                // #endif
 
                 // 디더링
                 float4 screenPos = input.ScreenPos;
