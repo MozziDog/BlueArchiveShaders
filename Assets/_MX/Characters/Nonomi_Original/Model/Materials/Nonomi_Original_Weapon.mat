@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Nonomi_Original_Weapon
-  m_Shader: {fileID: 4800000, guid: 9363ed14b4e52db4e8c6ecd525571fc1, type: 3}
+  m_Shader: {fileID: 4800000, guid: 02d96945336b1cf4ba4c3e7695b2e620, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords:
   - OUTLINE_AVG_NORMALS
@@ -22,75 +22,100 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-      _MainTex:
+    - _MainTex:
         m_Texture: {fileID: 2800000, guid: b0819ffea8208384f88f2cd05e48370c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-      _SourceTex:
+    - _MaskTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SourceTex:
         m_Texture: {fileID: 2800000, guid: 1f1f1a1913a0b4946859e3252a84416a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Ints: {}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
-      _AdditionalLightSharpness: 5
-      _AdditionalLightStrength: 1
-      _AlphaClip: 0
-      _AmbientColorAmount: 1
-      _Blend: 0
-      _BumpScale: 1
-      _Cull: 2
-      _Cutoff: 0.5
-      _DetailNormalMapScale: 1
-      _DitherThreshold: 0
-      _DstBlend: 0
-      _GlossMapScale: 1
-      _Glossiness: 0.5
-      _GlossyReflections: 1
-      _GlowStrength0: 0
-      _GlowStrictness0: 3
-      _GrayBrightness: 1
-      _IsDither: 0
-      _LightPow: 12.21
-      _LightStrong: 20
-      _LightValue: 0.22
-      _Metallic: 0
-      _OcclusionStrength: 1
-      _OutlineScreenZCorrection: 1
-      _OutlineThickness: 0.0035
-      _OverheatPow: 0
-      _OverheatValue: 0
-      _Parallax: 0.02
-      _ShadowPow: 21.11
-      _ShadowStrong: 20
-      _ShadowThreshold: 0.5
-      _ShadowValue: 0.5
-      _SmoothnessTextureChannel: 0
-      _SpecPow: 0.32
-      _SpecStrong: 0.1
-      _SpecularHighlights: 1
-      _SrcBlend: 1
-      _Surface: 0
-      _UVSec: 0
-      _UseGlow: 0
-      _UseOutlineAbsolute: 0
-      _UseOutlineNormal: 0
-      _UseOutlineVertexColor: 1
-      _WorkflowMode: 1
-      _ZWrite: 1
-      _lightStrong: 0
-      _lighthtValue: 0
+    - _AdditionalLightSharpness: 5
+    - _AdditionalLightStrength: 1
+    - _AlphaClip: 0
+    - _AmbientColorAmount: 1
+    - _Blend: 0
+    - _BumpScale: 1
+    - _Cull: 2
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DitherThreshold: 0
+    - _DstBlend: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _GlowStrength0: 0
+    - _GlowStrictness0: 3
+    - _GrayBrightness: 1
+    - _IsDither: 0
+    - _LightPow: 12.21
+    - _LightSharpness: 0.03
+    - _LightStrong: 20
+    - _LightValue: 0.22
+    - _Metallic: 0
+    - _OcclusionStrength: 1
+    - _OutlineScreenZCorrection: 1
+    - _OutlineThickness: 0.0035
+    - _OutlineWidth: 0.05
+    - _OverheatPow: 0
+    - _OverheatValue: 0
+    - _Parallax: 0.02
+    - _QueueControl: -1
+    - _QueueOffset: 0
+    - _RimAreaMultiplier: 10
+    - _RimStrength: 1
+    - _ShadowPow: 21.11
+    - _ShadowStrong: 20
+    - _ShadowThreshold: 0.5
+    - _ShadowValue: 0.5
+    - _SmoothnessTextureChannel: 0
+    - _SpecPow: 0.32
+    - _SpecStrong: 0.1
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _Surface: 0
+    - _UVSec: 0
+    - _UseGlow: 0
+    - _UseOutlineAbsolute: 0
+    - _UseOutlineNormal: 0
+    - _UseOutlineVertexColor: 1
+    - _WorkflowMode: 1
+    - _ZWrite: 1
+    - _lightStrong: 0
+    - _lighthtValue: 0
     m_Colors:
-      _CodeAddColor: {r: 0, g: 0, b: 0, a: 0}
-      _CodeAddRimColor: {r: 0, g: 0, b: 0, a: 0}
-      _CodeMultiplyColor: {r: 1, g: 1, b: 1, a: 1}
-      _Color: {r: 1, g: 1, b: 1, a: 1}
-      _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-      _FakeLightDir: {r: 0.1, g: 0.65, b: 0, a: 0}
-      _GlowMaskColor0: {r: 1, g: 1, b: 1, a: 1}
-      _GlowTint0: {r: 0, g: 0, b: 0, a: 1}
-      _OutlineTint: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 1}
-      _Overheat: {r: 0.8, g: 0.19999996, b: 0, a: 1}
-      _ShadowCol: {r: 0.6750623, g: 0.69152725, b: 0.6981132, a: 0}
-      _ShadowTint: {r: 0.735849, g: 0.735849, b: 0.735849, a: 1}
-      _SpecColor: {r: 1, g: 1, b: 1, a: 0}
+    - _CodeAddColor: {r: 0, g: 0, b: 0, a: 0}
+    - _CodeAddRimColor: {r: 0, g: 0, b: 0, a: 0}
+    - _CodeMultiplyColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FakeLightDir: {r: 0.1, g: 0.65, b: 0, a: 0}
+    - _GlowMaskColor0: {r: 1, g: 1, b: 1, a: 1}
+    - _GlowTint0: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineTint: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 1}
+    - _Overheat: {r: 0.8, g: 0.19999996, b: 0, a: 1}
+    - _RimLight_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    - _ShadowCol: {r: 0.6750623, g: 0.69152725, b: 0.6981132, a: 0}
+    - _ShadowTint: {r: 0.735849, g: 0.735849, b: 0.735849, a: 1}
+    - _SpecColor: {r: 1, g: 1, b: 1, a: 0}
+    - _Tint: {r: 0.95283014, g: 0.9349014, b: 0.7685564, a: 1}
   m_BuildTextureStacks: []

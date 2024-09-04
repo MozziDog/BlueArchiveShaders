@@ -2,21 +2,38 @@ Shader "_MX/MX_C-Hair"
 {
     Properties
     {
-        [NoScaleOffset]Tex_Base     ("Base", 2D)                        = "white" {}
-        [NoScaleOffset]Tex_normal   ("Normal", 2D)                      = "white" {}
-        [NoScaleOffset]Tex_mask     ("Mask", 2D)                        = "white" {}
-        _Tint                       ("Tint", Color)                     = (0.9528302, 0.9349014, 0.7685564, 0)
-        _ShadowTint                 ("ShadowTint", Color)               = (0.1603774, 0.1603774, 0.1603774, 0)
+        [Header(Textures)]
+        [NoScaleOffset]_MainTex     ("Base", 2D)                        = "white" {}
+        [NoScaleOffset]_MaskTex     ("Mask", 2D)                        = "black" {}
+        [NoScaleOffset]_HairSpecTex ("Hair Spec", 2D)                   = "black" {}
+
+        [Header(Colors)]
+        _Tint                       ("Tint", Color)                     = (0.9528302, 0.9349014, 0.7685564, 1)
+        _ShadowTint                 ("ShadowTint", Color)               = (0.8490566, 0.7651243, 0.6928622, 1)
         _ShadowThreshold            ("ShadowThreshold", Float)          = 0.4
-        _LightSharpness             ("LightSharpness", Float)           = 0.06
-        _RimAreaMultiplier          ("RimAreaMultiplier", Float)        = 3
+        _LightSharpness             ("LightSharpness", Float)           = 0.03
+
+        [Header(Specular)]
+        _SpecDirMultiplier          ("Spec Dir Transform", Vector)      = (0,0,0,0)
+        _SpecTopMultiplier          ("Spec Top Multiplier", Float)      = 4
+        _SpecTopLeveler             ("Spec Top Leveler", Float)         = 0.3
+        _SpecBotArea                ("Spec Bottom Area", Range(0, 1))   = 0.7
+		_SpecBotMultiplier          ("Spec Bottom Multipler", Float)    = 0.1
+        _SpecPow                    ("Spec Strength", Float)            = 10
+
+        [Header(Rim Light)]
+        _RimAreaMultiplier          ("RimAreaMultiplier", Float)        = 10
         _RimStrength                ("RimStrength", Float)              = 1
-        _RimLight_Color             ("RimLight Color", Color)           = (0.9245283, 0.9245283, 0.9245283, 0)
+        _RimLight_Color             ("RimLight Color", Color)           = (0.5, 0.5, 0.5, 0)
+
+        [Header(Adjust Color)]
         _GrayBrightness             ("GrayBrightness", Float)           = 1
         _CodeMultiplyColor          ("CodeMultiplyColor", Color)        = (1, 1, 1, 0)
         _CodeAddColor               ("CodeAddColor", Color)             = (0, 0, 0, 0)
         _CodeAddRimColor            ("CodeAddRimColor", Color)          = (0, 0, 0, 0)
         _DitherThreshold            ("DitherThreshold", Float)          = 0
+
+        [Header(Outline)]
         _OutlineWidth               ("OutlineWidth", Range(0.0, 1.0))   = 0.05
         _OutlineColor               ("OutlineColor", Color)             = (0.0, 0.0, 0.0, 1)
 
@@ -61,18 +78,24 @@ Shader "_MX/MX_C-Hair"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Shadows.hlsl"
 
-            SAMPLER(samplerTex_Base);
-            TEXTURE2D(Tex_Base); 
-            SAMPLER(samplerTex_Normal);
-            TEXTURE2D(Tex_normal);
-            SAMPLER(samplerTex_Mask);
-            TEXTURE2D(Tex_mask);
+            TEXTURE2D(_MainTex); 
+            SAMPLER(sampler_MainTex);
+            TEXTURE2D(_MaskTex);
+            SAMPLER(sampler_MaskTex);
+            TEXTURE2D(_HairSpecTex);
+            SAMPLER(sampler_HairSpecTex);
 
             CBUFFER_START(UnityPerMaterial)
                 float4 _Tint;
                 float4 _ShadowTint;
                 float _ShadowThreshold;
                 float _LightSharpness;
+                float4 _SpecDirMultiplier;
+                float _SpecTopMultiplier;
+                float _SpecTopLeveler;
+                float _SpecBotArea;
+		        float _SpecBotMultiplier;
+                float _SpecPow;
                 float _RimAreaMultiplier;
                 float _RimStrength;
                 float4 _RimLight_Color;
@@ -145,29 +168,41 @@ Shader "_MX/MX_C-Hair"
                 color = mainLight.distanceAttenuation * mainLight.shadowAttenuation;
 
                 // 텍스쳐 샘플링
-                //UnityTexture2D mainTex2D = UnityBuildTexture2DStructNoScale(Tex_Base);
-                float4 albedo = SAMPLE_TEXTURE2D(Tex_Base, samplerTex_Base, input.uv);
-                //UnityTexture2D normalTex2D = UnityBuildTexture2DStructNoScale(Tex_normal);
-                float4 normalSample = SAMPLE_TEXTURE2D(Tex_normal, samplerTex_Normal, input.uv);
-                //UnityTexture2D maskTex2D = UnityBuildTexture2DStructNoScale(Tex_mask);
-                float4 maskSample = SAMPLE_TEXTURE2D(Tex_mask, samplerTex_Normal, input.uv);
+                float4 albedo = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, input.uv);
+                float4 maskSample = SAMPLE_TEXTURE2D(_MaskTex, sampler_MaskTex, input.uv);
+                float4 hairSpec = SAMPLE_TEXTURE2D(_HairSpecTex, sampler_HairSpecTex, input.uv);
 
                 // 음영 계산
-                // float3 mainLightDir, mainLightColor;
-                // MainLight_float(mainLightDir, mainLightColor);
                 float3 mainLightDir = mainLight.direction;
                 float3 mainLightColor = mainLight.color;
                 float3 mainLightAttenuation = mainLight.shadowAttenuation * mainLight.distanceAttenuation;
                 mainLightColor = mainLightColor * mainLightAttenuation;
                 float dotResult = dot(mainLightDir, input.normalWS.xyz);
+                // 디테일 마스크 적용 G: 오클루전
+                dotResult = dotResult - (maskSample.g) * (maskSample.a);
                 float brightness = smoothstep(_ShadowThreshold, _ShadowThreshold + _LightSharpness, (dotResult + 1) * 0.5);
-                brightness = brightness * maskSample.g;
+
+
+                // Specular 계산
+                float3 halfVector = (mainLightDir + normalize(input.viewDirWS.xyz)) / 2;
+                float4 specVectorOS = hairSpec * 2 - 1;
+                float4 specVector = mul(UNITY_MATRIX_M, specVectorOS);   // 스페큘러 벡터를 world space 기준으로 변환
+                specVector = normalize(specVector);
+                specVector = normalize(input.normalWS - specVector * _SpecDirMultiplier);
+                float specRaw = saturate(dot(halfVector, specVector.xyz));
+                float specBrightness = pow(specRaw, _SpecPow);
+                if(hairSpec.r < _SpecBotArea)
+                    specBrightness = specBrightness * _SpecBotMultiplier;
+                else
+                {
+                    specBrightness = specBrightness * _SpecTopMultiplier;
+                    specBrightness = min(specBrightness, _SpecTopLeveler);
+                }
+                specBrightness = specBrightness * hairSpec.a * (1-maskSample.g * maskSample.a);
 
                 // 틴트 적용
                 float4 shadeTint = brightness * _Tint + abs(1-brightness) * _ShadowTint;
                 float4 tintedAlbedo = float4(mainLightColor.xyz, 1) * albedo * shadeTint;
-                // float4 tintedAlbedo = (brightness, brightness, brightness, 1) * albedo * shadeTint;
-                //float4 tintedAlbedo = albedo * shadeTint;
 
                 // 코드로 색상 조정 1
                 float4 adjustedAlbedo = tintedAlbedo * _CodeMultiplyColor + _CodeAddColor;
@@ -175,21 +210,14 @@ Shader "_MX/MX_C-Hair"
                 // 림라이팅
                 float rim_base = pow((1.0 - saturate(dot(normalize(input.normalWS.xyz), normalize(input.viewDirWS)))), _RimAreaMultiplier);
                 float4 rimlight = rim_base * _RimLight_Color * _RimStrength;
+                // 디테일 마스크 적용 B: 림라이팅?
+                rimlight = rimlight * (1 - maskSample.b);
 
                 // 코드로 색상 조정 2
-                rimlight = rimlight * _CodeAddRimColor;
+                rimlight = rimlight * (1 + _CodeAddRimColor);
             
                 // 최종 색상 조정 (_GrayBrightness)
-                float4 finalColor = (adjustedAlbedo + rimlight) * _GrayBrightness;
-
-                // #if _ALPHATEST_ON
-                //     half alpha = surfaceDescription.Alpha;
-                //     clip(alpha - surfaceDescription.AlphaClipThreshold);
-                // #elif _SURFACE_TYPE_TRANSPARENT
-                //     half alpha = surfaceDescription.Alpha;
-                // #else
-                //     half alpha = 1;
-                // #endif
+                float4 finalColor = (adjustedAlbedo + rimlight + specBrightness) * _GrayBrightness;
 
                 // 디더링
                 float4 screenPos = input.ScreenPos;

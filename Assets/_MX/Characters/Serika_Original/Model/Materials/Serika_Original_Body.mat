@@ -66,7 +66,7 @@ Material:
     - _QueueControl: -1
     - _QueueOffset: 0
     - _RimAreaMultiplier: 10
-    - _RimStrength: 1
+    - _RimStrength: 0.35
     - _ShadowThreshold: 0.4
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1

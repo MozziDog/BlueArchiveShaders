@@ -2,8 +2,8 @@ Shader "_MX/MX_C-Body"
 {
     Properties
     {
-        [NoScaleOffset]Tex_Base     ("Base", 2D)                        = "white" {}
-        [NoScaleOffset]Tex_Mask     ("Mask", 2D)                        = "black" {}
+        [NoScaleOffset]_MainTex     ("Base", 2D)                        = "white" {}
+        [NoScaleOffset]_MaskTex     ("Mask", 2D)                        = "black" {}
         _Tint                       ("Tint", Color)                     = (0.9528302, 0.9349014, 0.7685564, 1)
         _ShadowTint                 ("ShadowTint", Color)               = (0.8490566, 0.7651243, 0.6928622, 1)
         _ShadowThreshold            ("ShadowThreshold", Float)          = 0.4
@@ -60,10 +60,10 @@ Shader "_MX/MX_C-Body"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Shadows.hlsl"
 
-            TEXTURE2D(Tex_Base); 
-            SAMPLER(samplerTex_Base);
-            TEXTURE2D(Tex_Mask);
-            SAMPLER(samplerTex_Mask);
+            TEXTURE2D(_MainTex); 
+            SAMPLER(sampler_MainTex);
+            TEXTURE2D(_MaskTex);
+            SAMPLER(sampler_MaskTex);
 
             CBUFFER_START(UnityPerMaterial)
                 float4 _Tint;
@@ -142,8 +142,8 @@ Shader "_MX/MX_C-Body"
                 color = mainLight.distanceAttenuation * mainLight.shadowAttenuation;
 
                 // 텍스쳐 샘플링
-                float4 albedo = SAMPLE_TEXTURE2D(Tex_Base, samplerTex_Base, input.uv);
-                float4 maskSample = SAMPLE_TEXTURE2D(Tex_Mask, samplerTex_Mask, input.uv);
+                float4 albedo = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, input.uv);
+                float4 maskSample = SAMPLE_TEXTURE2D(_MaskTex, sampler_MaskTex, input.uv);
 
                 // 음영 계산
                 float3 mainLightDir = mainLight.direction;

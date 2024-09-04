@@ -78,7 +78,7 @@ Material:
     - _ReceiveShadows: 1
     - _RimAreaLeveler: 2
     - _RimAreaMultiplier: 6
-    - _RimStrength: 1
+    - _RimStrength: 0.2
     - _ShadowThreshold: 0.6
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0

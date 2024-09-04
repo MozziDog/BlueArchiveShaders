@@ -96,7 +96,7 @@ Material:
     - _CodeMultiplyColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0.5882353, g: 0.5882353, b: 0.5882353, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineColor: {r: 0.71599996, g: 0.39201805, b: 0.28510404, a: 1}
     - _OutlineTint: {r: 0.9528302, g: 0.6257975, b: 0.5977661, a: 1}
     - _RimLight_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0}
     - _ShadowLightDir: {r: -0.34190506, g: 0.93973476, b: -0.0000026226044, a: 0}
