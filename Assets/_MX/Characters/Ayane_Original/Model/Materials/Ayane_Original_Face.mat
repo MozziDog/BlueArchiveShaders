@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Ayane_Original_Face
-  m_Shader: {fileID: 4800000, guid: 672e3758f9e566f499b60e0d7ab528a4, type: 3}
+  m_Shader: {fileID: 4800000, guid: 02d96945336b1cf4ba4c3e7695b2e620, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -20,60 +20,77 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-      _MainTex:
+    - _MainTex:
         m_Texture: {fileID: 2800000, guid: f648bcb03e3597545ad35ea57a871cda, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-      _MaskTex:
+    - _MaskTex:
         m_Texture: {fileID: 2800000, guid: 5a29701fffa0c464888ac443f439a777, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Ints: {}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
-      _AdditionalLightSharpness: 5
-      _AdditionalLightStrength: 1
-      _AdjustiveFaceShadow: 0
-      _AlphaClip: 0
-      _Blend: 0
-      _BumpScale: 1
-      _Cull: 2
-      _Cutoff: 0.5
-      _DitherThreshold: 0
-      _DstBlend: 0
-      _DstBlendAlpha: 0
-      _EnvironmentReflections: 1
-      _GlossMapScale: 0
-      _Glossiness: 0
-      _GlossyReflections: 0
-      _GrayBrightness: 1
-      _MaskGSensitivity: 2
-      _Metallic: 0
-      _OcclusionStrength: 1
-      _OutlineZCorrection: 0
-      _QueueOffset: 0
-      _ReceiveShadows: 1
-      _RimAreaLeveler: 2
-      _RimAreaMultiplier: 3
-      _RimStrength: 1
-      _ShadowThreshold: 0.7
-      _Smoothness: 0.5
-      _SmoothnessTextureChannel: 0
-      _SpecularHighlights: 1
-      _SrcBlend: 1
-      _SrcBlendAlpha: 1
-      _Surface: 0
-      _WorkflowMode: 1
-      _ZWrite: 1
+    - _AdditionalLightSharpness: 5
+    - _AdditionalLightStrength: 1
+    - _AdjustiveFaceShadow: 0
+    - _AlphaClip: 0
+    - _Blend: 0
+    - _BumpScale: 1
+    - _Cull: 2
+    - _Cutoff: 0.5
+    - _DitherThreshold: 0
+    - _DstBlend: 0
+    - _DstBlendAlpha: 0
+    - _EnvironmentReflections: 1
+    - _GlossMapScale: 0
+    - _Glossiness: 0
+    - _GlossyReflections: 0
+    - _GrayBrightness: 1
+    - _LightSharpness: 0.03
+    - _MaskGSensitivity: 2
+    - _Metallic: 0
+    - _OcclusionStrength: 1
+    - _OutlineWidth: 0.05
+    - _OutlineZCorrection: 0
+    - _QueueControl: -1
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _RimAreaLeveler: 2
+    - _RimAreaMultiplier: 3
+    - _RimStrength: 1
+    - _ShadowThreshold: 0.7
+    - _Smoothness: 0.5
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _SrcBlendAlpha: 1
+    - _Surface: 0
+    - _WorkflowMode: 1
+    - _ZWrite: 1
     m_Colors:
-      _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-      _CodeAddColor: {r: 0, g: 0, b: 0, a: 0}
-      _CodeAddRimColor: {r: 0, g: 0, b: 0, a: 0}
-      _CodeMultiplyColor: {r: 1, g: 1, b: 1, a: 1}
-      _Color: {r: 1, g: 1, b: 1, a: 1}
-      _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-      _OutlineTint: {r: 0.5849056, g: 0.2896938, b: 0.2896938, a: 1}
-      _ShadowLightDir: {r: -0.3419038, g: 0.93973523, b: 8.7251925E-07, a: 0}
-      _ShadowTint: {r: 0.8773585, g: 0.6166341, b: 0.6166341, a: 1}
-      _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-      _Tint: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _CodeAddColor: {r: 0, g: 0, b: 0, a: 0}
+    - _CodeAddRimColor: {r: 0, g: 0, b: 0, a: 0}
+    - _CodeMultiplyColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineTint: {r: 0.5849056, g: 0.2896938, b: 0.2896938, a: 1}
+    - _RimLight_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    - _ShadowLightDir: {r: -0.3419038, g: 0.93973523, b: 0.00000087251925, a: 0}
+    - _ShadowTint: {r: 0.8773585, g: 0.6166341, b: 0.6166341, a: 1}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _Tint: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

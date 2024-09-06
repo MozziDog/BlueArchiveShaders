@@ -33,6 +33,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: f7698b763401a97458df779e850e9c9e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MaskTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SourceTex:
         m_Texture: {fileID: 2800000, guid: 15bc36dc130a4b248b4ecefbad87b2ab, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -110,5 +114,5 @@ Material:
     - _ShadowCol: {r: 0.6103151, g: 0.6132076, b: 0.6132076, a: 0}
     - _ShadowTint: {r: 0.735849, g: 0.735849, b: 0.735849, a: 1}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Tint: {r: 0.95283014, g: 0.9349014, b: 0.7685564, a: 0}
+    - _Tint: {r: 0.990566, g: 0.9821158, b: 0.9111338, a: 0}
   m_BuildTextureStacks: []

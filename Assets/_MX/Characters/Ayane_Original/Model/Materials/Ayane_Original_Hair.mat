@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Ayane_Original_Hair
-  m_Shader: {fileID: 4800000, guid: 7f3ad4fcc8fee9849b20e7fbf92a96ad, type: 3}
+  m_Shader: {fileID: 4800000, guid: 0b3eeb207fa7cc04f8dd067878575df7, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -20,55 +20,75 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-      _HairSpecTex:
+    - _HairSpecTex:
         m_Texture: {fileID: 2800000, guid: 6172ac9ee681a494a9a2cd10f5ee4151, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-      _MainTex:
+    - _MainTex:
         m_Texture: {fileID: 2800000, guid: bc32af5e3584a9747b7aaf38c6768d38, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-      _MaskTex:
+    - _MaskTex:
         m_Texture: {fileID: 2800000, guid: fa34e4a88af87f6448fb7e3bc96e043d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-      _TempTex:
+    - _TempTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Ints: {}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
-      _AdditionalLightSharpness: 5
-      _AdditionalLightStrength: 1
-      _AdjustiveHairShadow: 0
-      _Cull: 0
-      _DitherThreshold: 0
-      _DstBlend: 0
-      _DstBlendAlpha: 0
-      _GlowStrength: 1
-      _GrayBrightness: 1
-      _MaskGSensitivity: 0.3
-      _OutlineZCorrection: 0
-      _RimAreaLeveler: 6
-      _RimAreaMultiplier: 7
-      _RimStrength: 1
-      _ShadowThreshold: 0.4
-      _SpecBotArea: 0.41
-      _SpecBotMultiplier: 5.94884
-      _SpecStrength: 1.5
-      _SpecTopLeveler: 8.9
-      _SpecTopMultiplier: 9.9
-      _SrcBlend: 1
-      _SrcBlendAlpha: 1
-      _ZWrite: 1
+    - _AdditionalLightSharpness: 5
+    - _AdditionalLightStrength: 1
+    - _AdjustiveHairShadow: 0
+    - _Cull: 0
+    - _DitherThreshold: 0
+    - _DstBlend: 0
+    - _DstBlendAlpha: 0
+    - _GlowStrength: 1
+    - _GrayBrightness: 1
+    - _LightSharpness: 0.03
+    - _MaskGSensitivity: 0.3
+    - _OutlineWidth: 0.05
+    - _OutlineZCorrection: 0
+    - _QueueControl: -1
+    - _QueueOffset: 0
+    - _RimAreaLeveler: 6
+    - _RimAreaMultiplier: 7
+    - _RimStrength: 1
+    - _ShadowThreshold: 0.4
+    - _SpecBotArea: 0.41
+    - _SpecBotMultiplier: 5.94884
+    - _SpecPow: 10
+    - _SpecStrength: 1.5
+    - _SpecTopArea: 0.7
+    - _SpecTopLeveler: 8.9
+    - _SpecTopMultiplier: 9.9
+    - _SrcBlend: 1
+    - _SrcBlendAlpha: 1
+    - _ZWrite: 1
     m_Colors:
-      _CodeAddColor: {r: 0, g: 0, b: 0, a: 0}
-      _CodeAddRimColor: {r: 0, g: 0, b: 0, a: 0}
-      _CodeMultiplyColor: {r: 1, g: 1, b: 1, a: 1}
-      _GlowTint: {r: 0, g: 0, b: 0, a: 1}
-      _OutlineTint: {r: 0, g: 0, b: 0, a: 1}
-      _ShadowTint: {r: 0.58508366, g: 0.6001577, b: 0.7169812, a: 1}
-      _SpecDirMultiplier: {r: 0.31000006, g: 0.20000006, b: 7.255479E-07, a: 0}
-      _Tint: {r: 1, g: 1, b: 1, a: 1}
-      _TwoSideTint: {r: 1, g: 1, b: 1, a: 1}
+    - _CodeAddColor: {r: 0, g: 0, b: 0, a: 0}
+    - _CodeAddRimColor: {r: 0, g: 0, b: 0, a: 0}
+    - _CodeMultiplyColor: {r: 1, g: 1, b: 1, a: 1}
+    - _GlowTint: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineTint: {r: 0, g: 0, b: 0, a: 1}
+    - _RimLight_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    - _ShadowTint: {r: 0.58508366, g: 0.6001577, b: 0.7169812, a: 1}
+    - _SpecDirMultiplier: {r: 0.31000006, g: 0.20000006, b: 0.0000007255479, a: 0}
+    - _Tint: {r: 1, g: 1, b: 1, a: 1}
+    - _TwoSideTint: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

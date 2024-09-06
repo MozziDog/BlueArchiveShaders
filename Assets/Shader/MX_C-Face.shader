@@ -1,25 +1,17 @@
-Shader "_MX/MX_C-Hair"
+Shader "_MX/MX_C-Face"
 {
     Properties
     {
         [Header(Textures)]
         [NoScaleOffset]_MainTex     ("Base", 2D)                        = "white" {}
         [NoScaleOffset]_MaskTex     ("Mask", 2D)                        = "black" {}
-        [NoScaleOffset]_HairSpecTex ("Hair Spec", 2D)                   = "black" {}
 
         [Header(Colors)]
         _Tint                       ("Tint", Color)                     = (0.9528302, 0.9349014, 0.7685564, 1)
         _ShadowTint                 ("ShadowTint", Color)               = (0.8490566, 0.7651243, 0.6928622, 1)
         _ShadowThreshold            ("ShadowThreshold", Float)          = 0.4
         _LightSharpness             ("LightSharpness", Float)           = 0.03
-
-        [Header(Specular)]
-        _SpecDirMultiplier          ("Spec Dir Transform", Vector)      = (0,0,0,0)
-        _SpecTopMultiplier          ("Spec Top Multiplier", Float)      = 4
-        _SpecTopLeveler             ("Spec Top Leveler", Float)         = 0.3
-        _SpecTopArea                ("Spec Top Area", Range(0, 1))      = 0.7
-		_SpecBotMultiplier          ("Spec Bottom Multipler", Float)    = 0.1
-        _SpecPow                    ("Spec Strength", Float)            = 10
+        // _AdjustiveFaceShadow        ("Apply Mask R", Range(0, 1))       = 0
 
         [Header(Rim Light)]
         _RimAreaMultiplier          ("RimAreaMultiplier", Float)        = 10
@@ -82,20 +74,12 @@ Shader "_MX/MX_C-Hair"
             SAMPLER(sampler_MainTex);
             TEXTURE2D(_MaskTex);
             SAMPLER(sampler_MaskTex);
-            TEXTURE2D(_HairSpecTex);
-            SAMPLER(sampler_HairSpecTex);
 
             CBUFFER_START(UnityPerMaterial)
                 float4 _Tint;
                 float4 _ShadowTint;
                 float _ShadowThreshold;
                 float _LightSharpness;
-                float4 _SpecDirMultiplier;
-                float _SpecTopMultiplier;
-                float _SpecTopLeveler;
-                float _SpecTopArea;
-		        float _SpecBotMultiplier;
-                float _SpecPow;
                 float _RimAreaMultiplier;
                 float _RimStrength;
                 float4 _RimLight_Color;
@@ -170,7 +154,6 @@ Shader "_MX/MX_C-Hair"
                 // 텍스쳐 샘플링
                 float4 albedo = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, input.uv);
                 float4 maskSample = SAMPLE_TEXTURE2D(_MaskTex, sampler_MaskTex, input.uv);
-                float4 hairSpec = SAMPLE_TEXTURE2D(_HairSpecTex, sampler_HairSpecTex, input.uv);
 
                 // 음영 계산
                 float3 mainLightDir = mainLight.direction;
@@ -182,23 +165,14 @@ Shader "_MX/MX_C-Hair"
                 dotResult = dotResult - (maskSample.g) * (maskSample.a);
                 float brightness = smoothstep(_ShadowThreshold, _ShadowThreshold + _LightSharpness, (dotResult + 1) * 0.5);
 
-
                 // Specular 계산
-                float4 normalizedHairSpec = hairSpec * 2 - 1;
-                float specular = saturate(dot(input.normalWS.xyz, _SpecDirMultiplier.xyz));
-                specular = pow(specular, _SpecPow);
-                float topOrBottom = specular * (1 + normalizedHairSpec.x * hairSpec.a);
-                if(topOrBottom > _SpecTopArea)
-                {
-                    specular = specular * _SpecBotMultiplier;
-                }
-                else
-                {
-                    specular = specular * _SpecTopMultiplier;
-                }
-                specular = specular * ((1-maskSample.g) * maskSample.a);
-                specular = specular * brightness;           // 음영에 스페큘러 생기는 거 방지
-                specular = min(specular * hairSpec.a , _SpecTopLeveler);
+                float3 halfVector = normalize(mainLightDir + input.viewDirWS);
+                float spec = saturate(dot(halfVector, input.normalWS.xyz));
+                spec = pow(spec, 10);
+                // 디테일 마스크 적용 R: 메탈릭
+                spec = spec * maskSample.r;
+                // albedo = lerp(albedo, (mainLightColor, 1), maskSample.r * 0.1);
+                //albedo = albedo * (1- maskSample.r);
 
                 // 틴트 적용
                 float4 shadeTint = brightness * _Tint + abs(1-brightness) * _ShadowTint;
@@ -217,7 +191,7 @@ Shader "_MX/MX_C-Hair"
                 rimlight = rimlight * (1 + _CodeAddRimColor);
             
                 // 최종 색상 조정 (_GrayBrightness)
-                float4 finalColor = (adjustedAlbedo + rimlight + specular) * _GrayBrightness;
+                float4 finalColor = (adjustedAlbedo + rimlight + spec) * _GrayBrightness;
 
                 // 디더링
                 float4 screenPos = input.ScreenPos;

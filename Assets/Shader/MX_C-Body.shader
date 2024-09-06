@@ -2,20 +2,29 @@ Shader "_MX/MX_C-Body"
 {
     Properties
     {
+        [Header(Textures)]
         [NoScaleOffset]_MainTex     ("Base", 2D)                        = "white" {}
         [NoScaleOffset]_MaskTex     ("Mask", 2D)                        = "black" {}
+
+        [Header(Colors)]
         _Tint                       ("Tint", Color)                     = (0.9528302, 0.9349014, 0.7685564, 1)
         _ShadowTint                 ("ShadowTint", Color)               = (0.8490566, 0.7651243, 0.6928622, 1)
         _ShadowThreshold            ("ShadowThreshold", Float)          = 0.4
         _LightSharpness             ("LightSharpness", Float)           = 0.03
+        
+        [Header(Rim Light)]
         _RimAreaMultiplier          ("RimAreaMultiplier", Float)        = 10
         _RimStrength                ("RimStrength", Float)              = 1
         _RimLight_Color             ("RimLight Color", Color)           = (0.5, 0.5, 0.5, 0)
+        
+        [Header(Adjust Color)]
         _GrayBrightness             ("GrayBrightness", Float)           = 1
         _CodeMultiplyColor          ("CodeMultiplyColor", Color)        = (1, 1, 1, 0)
         _CodeAddColor               ("CodeAddColor", Color)             = (0, 0, 0, 0)
         _CodeAddRimColor            ("CodeAddRimColor", Color)          = (0, 0, 0, 0)
         _DitherThreshold            ("DitherThreshold", Float)          = 0
+        
+        [Header(Outline)]
         _OutlineWidth               ("OutlineWidth", Range(0.0, 1.0))   = 0.05
         _OutlineColor               ("OutlineColor", Color)             = (0.0, 0.0, 0.0, 1)
 
