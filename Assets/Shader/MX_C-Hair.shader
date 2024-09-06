@@ -181,7 +181,10 @@ Shader "_MX/MX_C-Hair"
                 // 디테일 마스크 적용 G: 오클루전
                 dotResult = dotResult - (maskSample.g) * (maskSample.a);
                 float brightness = smoothstep(_ShadowThreshold, _ShadowThreshold + _LightSharpness, (dotResult + 1) * 0.5);
-
+                
+                // 틴트 적용
+                float4 shadeTint = brightness * _Tint + abs(1-brightness) * _ShadowTint;
+                float4 tintedAlbedo = float4(mainLightColor.xyz, 1) * albedo * shadeTint;
 
                 // Specular 계산
                 float4 normalizedHairSpec = hairSpec * 2 - 1;
@@ -200,12 +203,8 @@ Shader "_MX/MX_C-Hair"
                 specular = specular * brightness;           // 음영에 스페큘러 생기는 거 방지
                 specular = min(specular * hairSpec.a , _SpecTopLeveler);
 
-                // 틴트 적용
-                float4 shadeTint = brightness * _Tint + abs(1-brightness) * _ShadowTint;
-                float4 tintedAlbedo = float4(mainLightColor.xyz, 1) * albedo * shadeTint;
-
                 // 코드로 색상 조정 1
-                float4 adjustedAlbedo = tintedAlbedo * _CodeMultiplyColor + _CodeAddColor;
+                float4 baseLit = (tintedAlbedo + specular) * _CodeMultiplyColor + _CodeAddColor;
 
                 // 림라이팅
                 float rim_base = pow((1.0 - saturate(dot(normalize(input.normalWS.xyz), normalize(input.viewDirWS)))), _RimAreaMultiplier);
@@ -217,7 +216,7 @@ Shader "_MX/MX_C-Hair"
                 rimlight = rimlight * (1 + _CodeAddRimColor);
             
                 // 최종 색상 조정 (_GrayBrightness)
-                float4 finalColor = (adjustedAlbedo + rimlight + specular) * _GrayBrightness;
+                float4 finalColor = (baseLit + rimlight) * _GrayBrightness;
 
                 // 디더링
                 float4 screenPos = input.ScreenPos;
