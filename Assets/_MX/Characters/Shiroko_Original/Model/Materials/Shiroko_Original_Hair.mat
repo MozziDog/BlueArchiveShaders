@@ -70,12 +70,12 @@ Material:
     - _RimStrength: 1
     - _ShadowThreshold: 0.5
     - _SpecBotArea: 0.5
-    - _SpecBotMultiplier: 4
+    - _SpecBotMultiplier: 0
     - _SpecPow: 10
     - _SpecStrength: 1
-    - _SpecTopArea: 0.7
-    - _SpecTopLeveler: 19
-    - _SpecTopMultiplier: 20
+    - _SpecTopArea: 0.25
+    - _SpecTopLeveler: 0.1
+    - _SpecTopMultiplier: 4
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _ZWrite: 1
