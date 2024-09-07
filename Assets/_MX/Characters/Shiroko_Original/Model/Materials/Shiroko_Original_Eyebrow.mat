@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Shiroko_Original_Eyebrow
-  m_Shader: {fileID: 4800000, guid: 02d96945336b1cf4ba4c3e7695b2e620, type: 3}
+  m_Shader: {fileID: 4800000, guid: 0fb8c8a207e851f4cba4893a6fbd0d47, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -87,5 +87,5 @@ Material:
     - _RimLight_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0}
     - _ShadowTint: {r: 0.8490566, g: 0.7651243, b: 0.6928622, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _Tint: {r: 0.20581168, g: 0.2513896, b: 0.3490566, a: 1}
+    - _Tint: {r: 0.40996808, g: 0.41918084, b: 0.433, a: 1}
   m_BuildTextureStacks: []

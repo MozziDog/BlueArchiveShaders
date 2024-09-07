@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Shiroko_Original_Halo
-  m_Shader: {fileID: 4800000, guid: 02d96945336b1cf4ba4c3e7695b2e620, type: 3}
+  m_Shader: {fileID: 4800000, guid: 80633a9c84b6980499e5bd654c107fa4, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords:
   - _GLOW_0
@@ -21,6 +21,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _HairSpecTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: b1562ee85255d8e418d35865e944cfaf, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -69,6 +73,11 @@ Material:
     - _RimStrength: 1
     - _ShadowThreshold: 0.4
     - _SmoothnessTextureChannel: 0
+    - _SpecBotMultiplier: 0.1
+    - _SpecPow: 10
+    - _SpecTopArea: 0.7
+    - _SpecTopLeveler: 0.3
+    - _SpecTopMultiplier: 4
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
@@ -79,7 +88,7 @@ Material:
     m_Colors:
     - _CodeAddColor: {r: 0, g: 0, b: 0, a: 0}
     - _CodeAddRimColor: {r: 0, g: 0, b: 0, a: 0}
-    - _CodeMultiplyColor: {r: 1, g: 1, b: 1, a: 0}
+    - _CodeMultiplyColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0.5882353, g: 0.5882353, b: 0.5882353, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _GlowMaskColor0: {r: 1, g: 1, b: 1, a: 1}
@@ -89,5 +98,6 @@ Material:
     - _ShadowTint: {r: 0.8490566, g: 0.7651243, b: 0.6928622, a: 1}
     - _SimpleBaseColor: {r: 0.42352936, g: 1.4096729, b: 2.9960785, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _Tint: {r: 0.263119, g: 1.149387, b: 1.1868347, a: 1}
+    - _SpecDirMultiplier: {r: 0, g: 0, b: 0, a: 0}
+    - _Tint: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

@@ -84,7 +84,7 @@ Material:
     - _CodeAddRimColor: {r: 0, g: 0, b: 0, a: 0}
     - _CodeMultiplyColor: {r: 1, g: 1, b: 1, a: 1}
     - _GlowTint: {r: 0, g: 0, b: 0, a: 1}
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineColor: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
     - _OutlineTint: {r: 0.32900003, g: 0.32900003, b: 0.32900003, a: 1}
     - _RimLight_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0}
     - _ShadowTint: {r: 0.5803922, g: 0.61960787, b: 0.7529412, a: 1}

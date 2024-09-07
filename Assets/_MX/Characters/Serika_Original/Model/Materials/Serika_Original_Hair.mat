@@ -70,7 +70,7 @@ Material:
     - _LightSharpness: 0.06
     - _MaskGSensitivity: 1
     - _OutlineWidth: 0.05
-    - _OutlineZCorrection: 0
+    - _OutlineZCorrection: 0.0005
     - _QueueControl: -1
     - _QueueOffset: 0
     - _RimAreaLeveler: 4

@@ -13,7 +13,8 @@ Shader "_MX/MX_C-Face"
         _LightSharpness             ("LightSharpness", Float)           = 0.03
 
         [Header(Face Light)]
-        _ShadowLightDir             ("Shadow Light Dir", Vector)        = (1.0, 1.5, 0)
+        _ShadowLightDir             ("Shadow Light Position", Vector)   = (1.0, 1.5, 0)
+        _ShadowLightIntensity       ("Shadow Light Intensitt", float)   = 10
         
         [Header(Rim Light)]
         _RimAreaMultiplier          ("RimAreaMultiplier", Float)        = 10
@@ -25,7 +26,7 @@ Shader "_MX/MX_C-Face"
         _CodeMultiplyColor          ("CodeMultiplyColor", Color)        = (1, 1, 1, 0)
         _CodeAddColor               ("CodeAddColor", Color)             = (0, 0, 0, 0)
         _CodeAddRimColor            ("CodeAddRimColor", Color)          = (0, 0, 0, 0)
-        _DitherThreshold            ("DitherThreshold", Float)          = 0
+        _DitherThreshold            ("DitherThreshold", Range(0, 1))          = 0
         
         [Header(Outline)]
         _OutlineWidth               ("OutlineWidth", Range(0.0, 1.0))   = 0.05
@@ -83,6 +84,7 @@ Shader "_MX/MX_C-Face"
                 float _ShadowThreshold;
                 float _LightSharpness;
                 float4 _ShadowLightDir;
+                float _ShadowLightIntensity;
                 float _RimAreaMultiplier;
                 float _RimStrength;
                 float4 _RimLight_Color;
@@ -109,8 +111,7 @@ Shader "_MX/MX_C-Face"
                 float4 tangentWS     : TEXCOORD2;    // xyz: tangent, w: viewDir.y
                 float4 bitangentWS   : TEXCOORD3;    // xyz: bitangent, w: viewDir.z
                 float3 viewDirWS     : TEXCOORD4;
-				float4 shadowCoord	 : TEXCOORD5;	// shadow receive 
-				float4 fogCoord	     : TEXCOORD6;	
+                float3 normalOS      : TEXCOORD6;
 				float3 positionWS	 : TEXCOORD7;	
                 float4 ScreenPos     : TEXCOORD8;
                 float4 positionCS    : SV_POSITION;
@@ -133,6 +134,7 @@ Shader "_MX/MX_C-Face"
                 output.positionCS = vertexInput.positionCS;
                 output.ScreenPos = ComputeScreenPos(TransformWorldToHClip(output.positionWS));
                 output.uv = input.uv;
+                output.normalOS = input.normalOS;
                 output.normalWS = float4(normalInput.normalWS, viewDirWS.x);
                 output.tangentWS = float4(normalInput.tangentWS, viewDirWS.y);
                 output.bitangentWS = float4(normalInput.bitangentWS, viewDirWS.z);
@@ -167,8 +169,7 @@ Shader "_MX/MX_C-Face"
                 // 디테일 마스크 적용 G: 오클루전
                 dotResult = dotResult - (maskSample.g) * (maskSample.a);
                 // 추가 라이팅 적용
-                float3 additionalLightDir = mul(UNITY_MATRIX_M, _ShadowLightDir);
-                float additionalLightDot = dot(additionalLightDir, input.normalWS.xyz);
+                float additionalLightDot = dot(normalize(_ShadowLightDir - input.positionWS) * _ShadowLightIntensity, input.normalWS.xyz);
                 dotResult = dotResult + additionalLightDot;
                 float brightness = smoothstep(_ShadowThreshold, _ShadowThreshold + _LightSharpness, (dotResult + 1) * 0.5);
 

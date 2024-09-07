@@ -22,7 +22,7 @@ Shader "_MX/MX_C-Body"
         _CodeMultiplyColor          ("CodeMultiplyColor", Color)        = (1, 1, 1, 0)
         _CodeAddColor               ("CodeAddColor", Color)             = (0, 0, 0, 0)
         _CodeAddRimColor            ("CodeAddRimColor", Color)          = (0, 0, 0, 0)
-        _DitherThreshold            ("DitherThreshold", Float)          = 0
+        _DitherThreshold            ("DitherThreshold", Range(0, 1))          = 0
         
         [Header(Outline)]
         _OutlineWidth               ("OutlineWidth", Range(0.0, 1.0))   = 0.05

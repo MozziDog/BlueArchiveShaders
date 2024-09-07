@@ -2,12 +2,12 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!43 &4300000
 Mesh:
-  serializedVersion: 10
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: OL_Shiroko_Dron_Wing
+  serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
     firstByte: 0
@@ -57,9 +57,7 @@ Mesh:
     e31: 0
     e32: 0
     e33: 1
-  m_BoneNameHashes:
-  - 2159042490
-  - 3574894312
+  m_BoneNameHashes: ba5fb080e88e14d5
   m_RootBoneNameHash: 3574894312
   m_BonesAABB:
   - m_Min: {x: -0.1502575, y: -0.14808623, z: 0.017558992}
@@ -67,13 +65,13 @@ Mesh:
   - m_Min: {x: -0.15166236, y: -0.14808623, z: 0.017558992}
     m_Max: {x: 0.14991328, y: 0.14890796, z: 0.017558992}
   m_VariableBoneCountWeights:
-    m_Data: []
+    m_Data: 
   m_MeshCompression: 1
   m_IsReadable: 0
   m_KeepVertices: 1
   m_KeepIndices: 1
   m_IndexFormat: 0
-  m_IndexBuffer:
+  m_IndexBuffer: 
   m_VertexData:
     serializedVersion: 3
     m_VertexCount: 0
@@ -135,7 +133,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 0
-    _typelessdata:
+    _typelessdata: 
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 108
@@ -153,13 +151,13 @@ Mesh:
       m_NumItems: 72
       m_Range: 0
       m_Start: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_Tangents:
       m_NumItems: 72
       m_Range: 0
       m_Start: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_Weights:
       m_NumItems: 36
@@ -177,7 +175,7 @@ Mesh:
       m_NumItems: 0
       m_Range: 0
       m_Start: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_BoneIndices:
       m_NumItems: 36
@@ -192,8 +190,8 @@ Mesh:
     m_Center: {x: -0.00016446412, y: 0.00019140542, z: 0.29880902}
     m_Extent: {x: 0.3176803, y: 0.14849713, z: 0}
   m_MeshUsageFlags: 1
-  m_BakedConvexCollisionMesh:
-  m_BakedTriangleCollisionMesh:
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
   m_MeshMetrics[0]: 0.08956633
   m_MeshMetrics[1]: 1
   m_MeshOptimizationFlags: -1
@@ -201,4 +199,4 @@ Mesh:
     serializedVersion: 2
     offset: 0
     size: 0
-    path:
+    path: 
