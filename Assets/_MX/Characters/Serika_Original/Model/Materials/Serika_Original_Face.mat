@@ -110,7 +110,7 @@ Material:
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineTint: {r: 0.9811321, g: 0.7301014, b: 0.7080812, a: 1}
     - _RimLight_Color: {r: 0.9245283, g: 0.9245283, b: 0.9245283, a: 0}
-    - _ShadowLightDir: {r: -1, g: 0, b: -1, a: 0}
+    - _ShadowLightDir: {r: -1.24, g: 0, b: -1, a: 0}
     - _ShadowTint: {r: 0.9433962, g: 0.7075472, b: 0.7075472, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Tint: {r: 1, g: 1, b: 1, a: 1}

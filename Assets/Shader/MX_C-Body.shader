@@ -220,8 +220,8 @@ Shader "_MX/MX_C-Body"
             struct appdata
             {
                 float4 vertex : POSITION;
+                float4 color : COLOR;
                 float3 normal : NORMAL;
-                float4 tangent : TANGENT;
             };
 
             struct v2f
@@ -232,18 +232,29 @@ Shader "_MX/MX_C-Body"
             float _OutlineWidth;
             float _DitherThreshold;
             float4 _OutlineColor;
+            float _OutlineZCorrection;
             
             v2f vert(appdata v)
             {
                 v2f o;
                 VertexPositionInputs vertexInput = GetVertexPositionInputs(v.vertex.xyz);
-                o.pos = TransformObjectToHClip(float3(v.vertex.xyz + v.normal * _OutlineWidth * 0.1));
 
+                // 카메라와의 거리에 따라 외곽선 두께 조정
+                float3 viewDirWS = GetCameraPositionWS() - vertexInput.positionWS;
+
+                // vertex color에 저장된 외곽선 정보 적용
+                float outlineOffset = v.color.a * _OutlineWidth * 0.1 * length(viewDirWS);
+
+                // 외곽선 최대 두께 설정
+                outlineOffset = min(outlineOffset, _OutlineWidth * 0.1);
+
+                o.pos = TransformObjectToHClip(float3(v.vertex.xyz + v.normal * outlineOffset ) + _OutlineZCorrection);
                 return o;
             }
 
             float4 frag(v2f i) : SV_Target
             {
+                // 디더링
                 float4 screenPos = i.pos;
                 float pesudoRandom = frac(sin(screenPos.y / screenPos.w) * 43758) + 0.01;
                 clip(pesudoRandom - _DitherThreshold);
