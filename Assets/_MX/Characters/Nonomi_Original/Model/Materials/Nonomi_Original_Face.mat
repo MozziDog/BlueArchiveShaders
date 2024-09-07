@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Nonomi_Original_Face
-  m_Shader: {fileID: 4800000, guid: 340ac614851d82a48b1e22c026d4152b, type: 3}
+  m_Shader: {fileID: 4800000, guid: ca4388367a0589e48a4fd06a849ca5f2, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -26,6 +26,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
         m_Texture: {fileID: 2800000, guid: 4b8147133a984b542a049811483f500b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MouthMaskTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MouthTex:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -62,6 +70,10 @@ Material:
     - _LightSharpness: 0.03
     - _MaskGSensitivity: 2
     - _Metallic: 0
+    - _MouthCol: 0
+    - _MouthOffsetX: 0
+    - _MouthOffsetY: 0
+    - _MouthRow: 0
     - _MouthTileCols: 8
     - _MouthTileRows: 8
     - _OcclusionStrength: 1
@@ -95,7 +107,7 @@ Material:
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineTint: {r: 0.9339623, g: 0.6035511, b: 0.6035511, a: 1}
     - _RimLight_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0}
-    - _ShadowLightDir: {r: -0.3419038, g: 0.9397352, b: 0.00000081291415, a: 0}
+    - _ShadowLightDir: {r: 1.02, g: 1.5, b: 0, a: 0}
     - _ShadowTint: {r: 0.990566, g: 0.78044593, b: 0.7429245, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Tint: {r: 1, g: 1, b: 1, a: 1}

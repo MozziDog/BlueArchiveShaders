@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Serika_Original_Face
-  m_Shader: {fileID: 4800000, guid: 340ac614851d82a48b1e22c026d4152b, type: 3}
+  m_Shader: {fileID: 4800000, guid: ca4388367a0589e48a4fd06a849ca5f2, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -79,6 +79,8 @@ Material:
     - _MaskGSensitivity: 2
     - _Metallic: 0
     - _MouthCol: 0
+    - _MouthOffsetX: 0
+    - _MouthOffsetY: 0
     - _MouthRow: 0
     - _OcclusionStrength: 1
     - _OutlineWidth: 0.05
@@ -108,7 +110,7 @@ Material:
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineTint: {r: 0.9811321, g: 0.7301014, b: 0.7080812, a: 1}
     - _RimLight_Color: {r: 0.9245283, g: 0.9245283, b: 0.9245283, a: 0}
-    - _ShadowLightDir: {r: -0.3419038, g: 0.9397352, b: 0.00000081291415, a: 0}
+    - _ShadowLightDir: {r: -1, g: 0, b: -1, a: 0}
     - _ShadowTint: {r: 0.9433962, g: 0.7075472, b: 0.7075472, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Tint: {r: 1, g: 1, b: 1, a: 1}

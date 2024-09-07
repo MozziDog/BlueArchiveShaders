@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Shiroko_Original_Face
-  m_Shader: {fileID: 4800000, guid: 02d96945336b1cf4ba4c3e7695b2e620, type: 3}
+  m_Shader: {fileID: 4800000, guid: ca4388367a0589e48a4fd06a849ca5f2, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -90,7 +90,7 @@ Material:
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineTint: {r: 0.6886792, g: 0.5360003, b: 0.5360003, a: 1}
     - _RimLight_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0}
-    - _ShadowLightDir: {r: -0.3419038, g: 0.93973523, b: 0.00000087251925, a: 0}
+    - _ShadowLightDir: {r: 1.14, g: 1.71, b: 0, a: 0}
     - _ShadowTint: {r: 0.9433962, g: 0.752047, b: 0.734247, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Tint: {r: 1, g: 1, b: 1, a: 1}
