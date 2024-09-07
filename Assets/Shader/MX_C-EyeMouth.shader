@@ -1,22 +1,21 @@
-Shader "_MX/MX_C-Face"
+Shader "_MX/MX_C-EyeMouth"
 {
     Properties
     {
         [Header(Textures)]
         [NoScaleOffset]_MainTex     ("Base", 2D)                        = "white" {}
-        [NoScaleOffset]_MaskTex     ("Mask", 2D)                        = "black" {}
+        [NoScaleOffset]_MouthTex    ("Mouth", 2D)                       = "black" {}
+        [NoScaleOffset]_MouthMaskTex("Mouth Mask", 2D)                  = "White" {}
 
         [Header(Colors)]
         _Tint                       ("Tint", Color)                     = (0.9528302, 0.9349014, 0.7685564, 1)
-        _ShadowTint                 ("ShadowTint", Color)               = (0.8490566, 0.7651243, 0.6928622, 1)
-        _ShadowThreshold            ("ShadowThreshold", Float)          = 0.4
-        _LightSharpness             ("LightSharpness", Float)           = 0.03
         // _AdjustiveFaceShadow        ("Apply Mask R", Range(0, 1))       = 0
 
-        [Header(Rim Light)]
-        _RimAreaMultiplier          ("RimAreaMultiplier", Float)        = 10
-        _RimStrength                ("RimStrength", Float)              = 1
-        _RimLight_Color             ("RimLight Color", Color)           = (0.5, 0.5, 0.5, 0)
+        [Header(Mouth)]
+        [IntRange]_MouthRow         ("Mouth Row", Range(1,8))           = 0
+        [IntRange]_MouthCol         ("Mouth Column", Range(1,8))        = 0
+        _MouthOffsetX               ("Mouth Offset X", Range(0,1))      = 0
+        _MouthOffsetY               ("Mouth Offset Y", Range(0,1))      = 0
 
         [Header(Adjust Color)]
         _GrayBrightness             ("GrayBrightness", Float)           = 1
@@ -24,10 +23,6 @@ Shader "_MX/MX_C-Face"
         _CodeAddColor               ("CodeAddColor", Color)             = (0, 0, 0, 0)
         _CodeAddRimColor            ("CodeAddRimColor", Color)          = (0, 0, 0, 0)
         _DitherThreshold            ("DitherThreshold", Float)          = 0
-
-        [Header(Outline)]
-        _OutlineWidth               ("OutlineWidth", Range(0.0, 1.0))   = 0.05
-        _OutlineColor               ("OutlineColor", Color)             = (0.0, 0.0, 0.0, 1)
 
         [HideInInspector]_QueueOffset("_QueueOffset", Float) = 0
         [HideInInspector]_QueueControl("_QueueControl", Float) = -1
@@ -72,17 +67,17 @@ Shader "_MX/MX_C-Face"
 
             TEXTURE2D(_MainTex); 
             SAMPLER(sampler_MainTex);
-            TEXTURE2D(_MaskTex);
-            SAMPLER(sampler_MaskTex);
+            TEXTURE2D(_MouthTex);
+            SAMPLER(sampler_MouthTex);
+            TEXTURE2D(_MouthMaskTex);
+            SAMPLER(sampler_MouthMaskTex);
 
             CBUFFER_START(UnityPerMaterial)
                 float4 _Tint;
-                float4 _ShadowTint;
-                float _ShadowThreshold;
-                float _LightSharpness;
-                float _RimAreaMultiplier;
-                float _RimStrength;
-                float4 _RimLight_Color;
+                float _MouthRow;
+                float _MouthCol;
+                float _MouthOffsetX;
+                float _MouthOffsetY;
                 float _GrayBrightness;
                 float4 _CodeMultiplyColor;
                 float4 _CodeAddColor;
@@ -153,107 +148,39 @@ Shader "_MX/MX_C-Face"
 
                 // 텍스쳐 샘플링
                 float4 albedo = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, input.uv);
-                float4 maskSample = SAMPLE_TEXTURE2D(_MaskTex, sampler_MaskTex, input.uv);
+                float2 mouthCellPos = (float2(( ceil( ( _MouthCol - 1.0 ) ) * 0.125 ) , ( ceil( ( _MouthRow - 9.0 ) ) * 0.125 )));
+                float2 mouthUV = input.uv - float2(_MouthOffsetX, _MouthOffsetY);
+                float4 mouthTexColor = SAMPLE_TEXTURE2D(_MouthTex, sampler_MouthTex, mouthUV * 0.5 + mouthCellPos);
+                float mouthMask = SAMPLE_TEXTURE2D(_MouthMaskTex, sampler_MouthMaskTex, input.uv).r;
 
-                // 음영 계산
-                float3 mainLightDir = mainLight.direction;
-                float3 mainLightColor = mainLight.color;
-                float3 mainLightAttenuation = mainLight.shadowAttenuation * mainLight.distanceAttenuation;
-                mainLightColor = mainLightColor * mainLightAttenuation;
-                float dotResult = dot(mainLightDir, input.normalWS.xyz);
-                // 디테일 마스크 적용 G: 오클루전
-                dotResult = dotResult - (maskSample.g) * (maskSample.a);
-                float brightness = smoothstep(_ShadowThreshold, _ShadowThreshold + _LightSharpness, (dotResult + 1) * 0.5);
-
-                // Specular 계산
-                float3 halfVector = normalize(mainLightDir + input.viewDirWS);
-                float spec = saturate(dot(halfVector, input.normalWS.xyz));
-                spec = pow(spec, 10);
-                // 디테일 마스크 적용 R: 메탈릭
-                spec = spec * maskSample.r;
-                // albedo = lerp(albedo, (mainLightColor, 1), maskSample.r * 0.1);
-                //albedo = albedo * (1- maskSample.r);
+                // 입과 나머지 텍스쳐 합체
+                float4 faceMouthBlendedColor = lerp( albedo , mouthTexColor , mouthMask);
 
                 // 틴트 적용
-                float4 shadeTint = brightness * _Tint + abs(1-brightness) * _ShadowTint;
-                float4 tintedAlbedo = float4(mainLightColor.xyz, 1) * albedo * shadeTint;
+                float3 mainLightColor = mainLight.color;
+                float4 tintedAlbedo = float4(mainLightColor.xyz, 1) * faceMouthBlendedColor * _Tint;
 
                 // 코드로 색상 조정 1
                 float4 adjustedAlbedo = tintedAlbedo * _CodeMultiplyColor + _CodeAddColor;
-
-                // 림라이팅
-                float rim_base = pow((1.0 - saturate(dot(normalize(input.normalWS.xyz), normalize(input.viewDirWS)))), _RimAreaMultiplier);
-                float4 rimlight = rim_base * _RimLight_Color * _RimStrength;
-                // 디테일 마스크 적용 B: 림라이팅?
-                rimlight = rimlight * (1 - maskSample.b);
-
-                // 코드로 색상 조정 2
-                rimlight = rimlight * (1 + _CodeAddRimColor);
             
                 // 최종 색상 조정 (_GrayBrightness)
-                float4 finalColor = (adjustedAlbedo + rimlight + spec) * _GrayBrightness;
+                float4 finalColor = (adjustedAlbedo) * _GrayBrightness;
 
                 // 디더링
                 float4 screenPos = input.ScreenPos;
                 float pesudoRandom = frac(sin(screenPos.y / screenPos.w) * 43758) + 0.01;
                 clip(pesudoRandom - _DitherThreshold);
+
+                // 입가 클리핑
+                // float mouthBlend = ( mouthMask * mouthTexColor.a );
+                float cutoutVal = saturate( 1.0 - mouthMask + mouthTexColor.a );
+                clip(cutoutVal - 0.5f);
             
                 return finalColor;
             }
             ENDHLSL
         }
         
-        //Outline
-        Pass
-        {
-            Name "Outline"
-            Cull Front
-            Tags
-            {
-                "LightMode" = "SRPDefaultUnlit"
-            }
-            HLSLPROGRAM
-            #pragma vertex vert
-            #pragma fragment frag
-            #pragma shader_feature _ALPHATEST_ON
-            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
-            
-            struct appdata
-            {
-                float4 vertex : POSITION;
-                float3 normal : NORMAL;
-                float4 tangent : TANGENT;
-            };
-
-            struct v2f
-            {
-                float4 pos          : SV_POSITION;
-            };
-            
-            float _OutlineWidth;
-            float _DitherThreshold;
-            float4 _OutlineColor;
-            
-            v2f vert(appdata v)
-            {
-                v2f o;
-                VertexPositionInputs vertexInput = GetVertexPositionInputs(v.vertex.xyz);
-                o.pos = TransformObjectToHClip(float3(v.vertex.xyz + v.normal * _OutlineWidth * 0.1));
-
-                return o;
-            }
-
-            float4 frag(v2f i) : SV_Target
-            {
-                float4 screenPos = i.pos;
-                float pesudoRandom = frac(sin(screenPos.y / screenPos.w) * 43758) + 0.01;
-                clip(pesudoRandom - _DitherThreshold);
-
-                return _OutlineColor;
-            }
-            
-            ENDHLSL
-        }
         UsePass "Universal Render Pipeline/Lit/ShadowCaster"
     }
 }

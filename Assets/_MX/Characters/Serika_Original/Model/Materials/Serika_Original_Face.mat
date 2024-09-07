@@ -36,6 +36,14 @@ Material:
         m_Texture: {fileID: 2800000, guid: 356e52c8b2bbbc140b9d45ee0f8ddd82, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MouthMaskTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MouthTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -70,6 +78,8 @@ Material:
     - _LightSharpness: 0.06
     - _MaskGSensitivity: 2
     - _Metallic: 0
+    - _MouthCol: 0
+    - _MouthRow: 0
     - _OcclusionStrength: 1
     - _OutlineWidth: 0.05
     - _OutlineZCorrection: 0

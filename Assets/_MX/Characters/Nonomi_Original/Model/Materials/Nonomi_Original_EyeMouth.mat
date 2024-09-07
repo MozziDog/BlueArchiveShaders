@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Nonomi_Original_EyeMouth
-  m_Shader: {fileID: 4800000, guid: 02d96945336b1cf4ba4c3e7695b2e620, type: 3}
+  m_Shader: {fileID: 4800000, guid: 340ac614851d82a48b1e22c026d4152b, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -26,6 +26,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MouthMaskTex:
+        m_Texture: {fileID: 2800000, guid: 136dd8d5ad52fed42aced93ec52d1c99, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MouthTex:
+        m_Texture: {fileID: 2800000, guid: b6d6115ada3edcb44a794d333afdb168, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MouthTileTex:
@@ -62,6 +70,10 @@ Material:
     - _GrayBrightness: 1
     - _LightSharpness: 0.03
     - _Metallic: 0
+    - _MouthCol: 0
+    - _MouthOffsetX: 0
+    - _MouthOffsetY: 0
+    - _MouthRow: 0
     - _MouthTileCols: 8
     - _MouthTileRows: 8
     - _OcclusionStrength: 1
