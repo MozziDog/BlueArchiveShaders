@@ -29,8 +29,8 @@ Shader "_MX/MX_C-Face"
         _DitherThreshold            ("DitherThreshold", Range(0, 1))          = 0
         
         [Header(Outline)]
-        _OutlineWidth               ("OutlineWidth", Range(0.0, 1.0))   = 0.05
-        _OutlineColor               ("OutlineColor", Color)             = (0.0, 0.0, 0.0, 1)
+        _OutlineWidth               ("OutlineWidth", Range(0.0, 1.0))   = 0.03
+        _OutlineColor               ("OutlineColor", Color)             = (0.6603774, 0.3576152, 0.0, 1)
 
         [HideInInspector]_QueueOffset("_QueueOffset", Float) = 0
         [HideInInspector]_QueueControl("_QueueControl", Float) = -1

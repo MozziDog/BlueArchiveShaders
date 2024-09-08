@@ -59,7 +59,7 @@ Material:
     - _QueueOffset: 0
     - _RimAreaMultiplier: 10
     - _RimStrength: 1
-    - _ShadowThreshold: 0.4
+    - _ShadowThreshold: 0.2
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _ZWrite: 1
@@ -71,7 +71,7 @@ Material:
     - _GlowTint: {r: 0, g: 0, b: 0, a: 1}
     - _InvViewPower4: {r: 1, g: 1, b: 1, a: 1}
     - _InvViewStrength4: {r: 0, g: 0, b: 0, a: 0}
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineColor: {r: 0.262, g: 0.262, b: 0.262, a: 1}
     - _OutlineTint: {r: 0.3584906, g: 0.3584906, b: 0.3584906, a: 1}
     - _RimAreaMultiplier4: {r: 5, g: 5, b: 5, a: 5}
     - _RimLight_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0}

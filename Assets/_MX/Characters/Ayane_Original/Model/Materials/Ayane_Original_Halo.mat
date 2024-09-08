@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Ayane_Original_Halo
-  m_Shader: {fileID: 4800000, guid: 02d96945336b1cf4ba4c3e7695b2e620, type: 3}
+  m_Shader: {fileID: 4800000, guid: 80633a9c84b6980499e5bd654c107fa4, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords:
   - _GLOW_0

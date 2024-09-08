@@ -35,6 +35,7 @@ Shader "_MX/MX_C-Halo"
             {
                 "LightMode" = "UniversalForward"
             }
+            Cull Off
             HLSLPROGRAM
             // Required to compile gles 2.0 with standard srp library
             #pragma prefer_hlslcc gles

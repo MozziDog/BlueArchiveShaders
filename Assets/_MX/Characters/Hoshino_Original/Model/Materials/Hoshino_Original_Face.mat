@@ -84,7 +84,7 @@ Material:
     - _MouthRow: 0
     - _OcclusionStrength: 1
     - _OutlineThickness: 0.0013
-    - _OutlineWidth: 0.05
+    - _OutlineWidth: 0.03
     - _OutlineZCorrection: 0
     - _Parallax: 0.02
     - _QueueControl: -1
@@ -92,6 +92,7 @@ Material:
     - _RimAreaLeveler: 2.9
     - _RimAreaMultiplier: 3.9
     - _RimStrength: 0
+    - _ShadowLightIntensity: 10
     - _ShadowThreshold: 0.57
     - _SmoothnessTextureChannel: 0
     - _SpecStrength: 0.5
@@ -108,10 +109,10 @@ Material:
     - _CodeMultiplyColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0.5882353, g: 0.5882353, b: 0.5882353, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
-    - _OutlineColor: {r: 0.71599996, g: 0.39201805, b: 0.28510404, a: 1}
+    - _OutlineColor: {r: 0.74509805, g: 0.5294118, b: 0.4392157, a: 1}
     - _OutlineTint: {r: 0.9528302, g: 0.6257975, b: 0.5977661, a: 1}
     - _RimLight_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0}
-    - _ShadowLightDir: {r: 1, g: 1.5, b: -0.0000026226044, a: 0}
+    - _ShadowLightDir: {r: 1.081, g: 0.6494616, b: 2.241219, a: 0}
     - _ShadowTint: {r: 0.9622642, g: 0.709342, b: 0.6944642, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Tint: {r: 1, g: 1, b: 1, a: 1}
