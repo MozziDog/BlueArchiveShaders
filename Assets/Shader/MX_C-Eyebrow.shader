@@ -12,6 +12,8 @@ Shader "_MX/MX_C-Eyebrow"
         _CodeAddRimColor            ("CodeAddRimColor", Color)          = (0, 0, 0, 0)
         _DitherThreshold            ("DitherThreshold", Range(0, 1))          = 0
 
+        _Zcorrection                ("ZbufferCorrection", Range(0, 1))  = 0.1
+
         [HideInInspector]_QueueOffset("_QueueOffset", Float) = 0
         [HideInInspector]_QueueControl("_QueueControl", Float) = -1
         [HideInInspector][NoScaleOffset]unity_Lightmaps("unity_Lightmaps", 2DArray) = "" {}
@@ -33,7 +35,7 @@ Shader "_MX/MX_C-Eyebrow"
                 "LightMode" = "UniversalForward"
             }
             Cull Back
-            ZTest Always
+            // ZTest Always
             HLSLPROGRAM
             // Required to compile gles 2.0 with standard srp library
             #pragma prefer_hlslcc gles
@@ -62,6 +64,7 @@ Shader "_MX/MX_C-Eyebrow"
                 float4 _CodeAddColor;
                 float4 _CodeAddRimColor;
                 float _DitherThreshold;
+                float _Zcorrection;
             CBUFFER_END
 
             struct Attributes
@@ -93,6 +96,7 @@ Shader "_MX/MX_C-Eyebrow"
 
                 output.positionWS = vertexInput.positionWS;
                 output.positionCS = vertexInput.positionCS;
+                output.positionCS.z += _Zcorrection;
                 output.ScreenPos = ComputeScreenPos(TransformWorldToHClip(output.positionWS));
                 output.uv = input.uv;
                 return output;

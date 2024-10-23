@@ -76,6 +76,7 @@ Material:
     - _WorkflowMode: 1
     - _ZCorrection: 0.045
     - _ZWrite: 1
+    - _Zcorrection: 0.1
     m_Colors:
     - _CodeAddColor: {r: 0, g: 0, b: 0, a: 0}
     - _CodeAddRimColor: {r: 0, g: 0, b: 0, a: 0}
