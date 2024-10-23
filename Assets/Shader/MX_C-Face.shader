@@ -252,7 +252,7 @@ Shader "_MX/MX_C-Face"
                 float3 viewDirWS = GetCameraPositionWS() - vertexInput.positionWS;
 
                 // vertex color에 저장된 외곽선 정보 적용
-                float outlineOffset = v.color.a * _OutlineWidth * 0.1 * length(viewDirWS);
+                float outlineOffset = v.color.a * _OutlineWidth * 0.1 * length(viewDirWS) * length(viewDirWS);
 
                 // 외곽선 최대 두께 설정
                 outlineOffset = min(outlineOffset, _OutlineWidth * 0.1);
